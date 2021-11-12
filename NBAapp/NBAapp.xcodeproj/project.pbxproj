@@ -9,25 +9,25 @@
 /* Begin PBXBuildFile section */
 		C20E2AE7273E54A8009A194D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E2AE6273E54A8009A194D /* AppDelegate.swift */; };
 		C20E2AE9273E54A8009A194D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E2AE8273E54A8009A194D /* SceneDelegate.swift */; };
-		C20E2AEB273E54A8009A194D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E2AEA273E54A8009A194D /* ViewController.swift */; };
 		C20E2AEE273E54A8009A194D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E2AEC273E54A8009A194D /* Main.storyboard */; };
 		C20E2AF0273E54AA009A194D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C20E2AEF273E54AA009A194D /* Assets.xcassets */; };
 		C20E2AF3273E54AA009A194D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E2AF1273E54AA009A194D /* LaunchScreen.storyboard */; };
 		C20E2B00273E5705009A194D /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E2AFF273E5705009A194D /* Games.storyboard */; };
 		C20E2B02273E571E009A194D /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E2B01273E571E009A194D /* News.storyboard */; };
+		C20E2B04273E6753009A194D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E2B03273E6753009A194D /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C20E2AE3273E54A8009A194D /* NBAapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C20E2AE6273E54A8009A194D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C20E2AE8273E54A8009A194D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C20E2AEA273E54A8009A194D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C20E2AED273E54A8009A194D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C20E2AEF273E54AA009A194D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C20E2AF2273E54AA009A194D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C20E2AF4273E54AA009A194D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C20E2AFF273E5705009A194D /* Games.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Games.storyboard; sourceTree = "<group>"; };
 		C20E2B01273E571E009A194D /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		C20E2B03273E6753009A194D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,6 @@
 		C20E2AFC273E550C009A194D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C20E2AEA273E54A8009A194D /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +99,7 @@
 		C20E2AFD273E5514009A194D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C20E2B03273E6753009A194D /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C20E2AEB273E54A8009A194D /* ViewController.swift in Sources */,
+				C20E2B04273E6753009A194D /* DataManager.swift in Sources */,
 				C20E2AE7273E54A8009A194D /* AppDelegate.swift in Sources */,
 				C20E2AE9273E54A8009A194D /* SceneDelegate.swift in Sources */,
 			);
