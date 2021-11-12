@@ -10,7 +10,7 @@ import Foundation
 class DataManager {
     static let shared = DataManager()
     
-    //MARK: - news
+    //MARK: - news array
     let news: [[String: String]] = [
         ["Id": "1",
          "Title": "Lavigne and DeRozan repeated the achievement of Jordan and Pippen",
