@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UqQ-aU-MSV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="rb7-sD-ZfV">
+            <objects>
+                <navigationController id="UqQ-aU-MSV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ikV-eL-jSX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wm1-Ex-VZy" kind="relationship" relationship="rootViewController" id="k78-iA-EoU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCO-Wt-qho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-96" y="123"/>
+        </scene>
+        <!--Developers-->
+        <scene sceneID="Sdh-xi-W9d">
+            <objects>
+                <viewController title="Developers" id="5gt-VH-w6z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7tl-3m-e6C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fCQ-aL-E6B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Developers" image="brain.head.profile" catalog="system" id="Ovi-yl-Xgq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AD4-LO-Mch" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="909"/>
+        </scene>
+        <!--Teams-->
+        <scene sceneID="2ep-ui-rWw">
+            <objects>
+                <viewController storyboardIdentifier="teamsVC" title="Teams" id="yZf-Sl-a68" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Icd-Vd-fg7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uLw-Ic-7Yb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Teams" image="tshirt" catalog="system" id="PAI-EG-qfR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QDy-JF-p63" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1643" y="-181"/>
+        </scene>
+        <!--gamesVC-->
+        <scene sceneID="QaW-KC-hUI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Games" referencedIdentifier="gamesVC" id="gWA-iy-xbU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Games" image="sportscourt" catalog="system" id="Z71-Ji-bDK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1wz-aR-SrQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1642" y="258"/>
+        </scene>
+        <!--newsVC-->
+        <scene sceneID="krp-ac-SOE">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="newsVC" storyboardName="News" referencedIdentifier="newsVC" id="bXt-co-dH8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" image="newspaper" catalog="system" selectedImage="newspaper" id="AvZ-Uv-U6E"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bfq-6k-lOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1642" y="370"/>
+        </scene>
+        <!--TabBar-->
+        <scene sceneID="XsT-zC-HDo">
+            <objects>
+                <tabBarController id="wm1-Ex-VZy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="TabBar" id="hFd-ew-KcJ"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NV1-4S-Hg7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="yZf-Sl-a68" kind="relationship" relationship="viewControllers" id="zqf-Un-I02"/>
+                        <segue destination="gWA-iy-xbU" kind="relationship" relationship="viewControllers" id="9Dy-KB-HFF"/>
+                        <segue destination="bXt-co-dH8" kind="relationship" relationship="viewControllers" id="3se-wZ-XT5"/>
+                        <segue destination="5gt-VH-w6z" kind="relationship" relationship="viewControllers" id="Nb4-2l-jmF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="con-8E-EfT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="brain.head.profile" catalog="system" width="114" height="128"/>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
+        <image name="sportscourt" catalog="system" width="128" height="84"/>
+        <image name="tshirt" catalog="system" width="128" height="99"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
