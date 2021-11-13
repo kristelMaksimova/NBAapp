@@ -15,6 +15,10 @@
 		C20E2B00273E5705009A194D /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E2AFF273E5705009A194D /* Games.storyboard */; };
 		C20E2B02273E571E009A194D /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E2B01273E571E009A194D /* News.storyboard */; };
 		C20E2B04273E6753009A194D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E2B03273E6753009A194D /* DataManager.swift */; };
+		C23ADB5F273FEE7D0090A6C3 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23ADB5E273FEE7D0090A6C3 /* Team.swift */; };
+		C23ADB61273FF3A80090A6C3 /* TeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23ADB60273FF3A80090A6C3 /* TeamsController.swift */; };
+		C29ABEDB274029EA0063AF17 /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29ABEDA274029EA0063AF17 /* TeamsTableViewCell.swift */; };
+		C29ABEDD27402EFA0063AF17 /* TeamDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29ABEDC27402EFA0063AF17 /* TeamDetailedController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		C20E2AFF273E5705009A194D /* Games.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Games.storyboard; sourceTree = "<group>"; };
 		C20E2B01273E571E009A194D /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		C20E2B03273E6753009A194D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		C23ADB5E273FEE7D0090A6C3 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		C23ADB60273FF3A80090A6C3 /* TeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsController.swift; sourceTree = "<group>"; };
+		C29ABEDA274029EA0063AF17 /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
+		C29ABEDC27402EFA0063AF17 /* TeamDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailedController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 		C20E2AFA273E54FD009A194D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C23ADB5E273FEE7D0090A6C3 /* Team.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,6 +101,9 @@
 		C20E2AFC273E550C009A194D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C23ADB60273FF3A80090A6C3 /* TeamsController.swift */,
+				C29ABEDA274029EA0063AF17 /* TeamsTableViewCell.swift */,
+				C29ABEDC27402EFA0063AF17 /* TeamDetailedController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,8 +198,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C23ADB5F273FEE7D0090A6C3 /* Team.swift in Sources */,
 				C20E2B04273E6753009A194D /* DataManager.swift in Sources */,
+				C29ABEDB274029EA0063AF17 /* TeamsTableViewCell.swift in Sources */,
 				C20E2AE7273E54A8009A194D /* AppDelegate.swift in Sources */,
+				C29ABEDD27402EFA0063AF17 /* TeamDetailedController.swift in Sources */,
+				C23ADB61273FF3A80090A6C3 /* TeamsController.swift in Sources */,
 				C20E2AE9273E54A8009A194D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -262,7 +262,7 @@ class DataManager {
         ["id": "3",
          "teamName": "Hawks",
          "Founded": "1966",
-         "City": "Chicago",
+         "City": "Atlanta",
          "Arena": "United Center",
          "Head Coach": "Billy Donovan",
          "logoImage": "hawks-logo"],

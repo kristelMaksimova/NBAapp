@@ -15,8 +15,30 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NBA-logo" translatesAutoresizingMaskIntoConstraints="NO" id="lg0-Rs-9ZW">
+                                <rect key="frame" x="40" y="119" width="334" height="668"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lg0-Rs-9ZW" secondAttribute="height" multiplier="1:2" id="tzh-M4-5lL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSZ-SK-2iH">
+                                <rect key="frame" x="162" y="803" width="90.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lg0-Rs-9ZW" secondAttribute="trailing" constant="40" id="6Oc-dR-LFy"/>
+                            <constraint firstItem="lg0-Rs-9ZW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Ga2-EE-5AX"/>
+                            <constraint firstItem="jSZ-SK-2iH" firstAttribute="centerX" secondItem="lg0-Rs-9ZW" secondAttribute="centerX" id="bKK-SS-eff"/>
+                            <constraint firstItem="jSZ-SK-2iH" firstAttribute="top" secondItem="lg0-Rs-9ZW" secondAttribute="bottom" constant="16" id="egC-sS-Sh2"/>
+                            <constraint firstItem="lg0-Rs-9ZW" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="hVq-5Q-bT4"/>
+                            <constraint firstItem="lg0-Rs-9ZW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yj4-SW-Z70"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -25,6 +47,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NBA-logo" width="489" height="1102"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
