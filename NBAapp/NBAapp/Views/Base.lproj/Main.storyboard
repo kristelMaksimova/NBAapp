@@ -372,7 +372,7 @@
         <!--gamesVC-->
         <scene sceneID="QaW-KC-hUI">
             <objects>
-                <viewControllerPlaceholder storyboardName="Games" referencedIdentifier="gamesVC" id="gWA-iy-xbU" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="gamesVC" storyboardName="Games" referencedIdentifier="gamesVC" id="gWA-iy-xbU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Games" image="sportscourt" catalog="system" id="Z71-Ji-bDK"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1wz-aR-SrQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
