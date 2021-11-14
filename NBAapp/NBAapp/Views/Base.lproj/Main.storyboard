@@ -27,12 +27,38 @@
         <!--Developers-->
         <scene sceneID="Sdh-xi-W9d">
             <objects>
-                <viewController title="Developers" id="5gt-VH-w6z" sceneMemberID="viewController">
+                <viewController title="Developers" id="5gt-VH-w6z" customClass="DevelopersController" customModule="NBAapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7tl-3m-e6C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8O5-Ue-Xp3">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="developerCell" id="UDC-x8-Dyk">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UDC-x8-Dyk" id="7mh-sG-zFJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5gt-VH-w6z" id="XUZ-iM-k1h"/>
+                                    <outlet property="delegate" destination="5gt-VH-w6z" id="5Kz-a0-NpD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fCQ-aL-E6B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8O5-Ue-Xp3" firstAttribute="top" secondItem="fCQ-aL-E6B" secondAttribute="top" id="MH9-05-FOd"/>
+                            <constraint firstItem="8O5-Ue-Xp3" firstAttribute="leading" secondItem="fCQ-aL-E6B" secondAttribute="leading" id="PI5-N8-QTc"/>
+                            <constraint firstItem="fCQ-aL-E6B" firstAttribute="bottom" secondItem="8O5-Ue-Xp3" secondAttribute="bottom" id="Y8b-Iu-P3M"/>
+                            <constraint firstItem="fCQ-aL-E6B" firstAttribute="trailing" secondItem="8O5-Ue-Xp3" secondAttribute="trailing" id="h1C-Fz-6Ar"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Developers" image="brain.head.profile" catalog="system" id="Ovi-yl-Xgq"/>
                 </viewController>
@@ -170,6 +196,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FI8-le-D88">
+                                        <rect key="frame" x="62.5" y="66" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Head Coach:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMx-Hk-cX2">
                                         <rect key="frame" x="0.0" y="95" width="102" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
@@ -178,12 +210,6 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFQ-bQ-Tpc">
                                         <rect key="frame" x="112" y="95" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FI8-le-D88">
-                                        <rect key="frame" x="62.5" y="66" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -210,15 +236,15 @@
                                     <constraint firstAttribute="bottom" secondItem="CMx-Hk-cX2" secondAttribute="bottom" constant="12" id="vcL-f5-dTg"/>
                                 </constraints>
                             </view>
-                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZvD-Sm-zcn">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZvD-Sm-zcn">
                                 <rect key="frame" x="20" y="420" width="374" height="422"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lineupCell" id="0Rz-tI-LS6">
-                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Rz-tI-LS6" id="Cao-bT-oVL">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -254,7 +280,7 @@
                         <outlet property="arenaLabel" destination="FI8-le-D88" id="gm6-jN-tif"/>
                         <outlet property="cityLabel" destination="4U2-l4-Hgc" id="zgZ-Xn-wkg"/>
                         <outlet property="foundedLabel" destination="AF5-bh-XUl" id="Spl-KY-Y1x"/>
-                        <outlet property="headCoach" destination="EFQ-bQ-Tpc" id="b09-Kb-KDf"/>
+                        <outlet property="headCoachLabel" destination="EFQ-bQ-Tpc" id="UUk-93-1h1"/>
                         <outlet property="lineupTableView" destination="ZvD-Sm-zcn" id="vnR-hR-4NG"/>
                         <outlet property="profileView" destination="SM1-xI-Eea" id="rxb-5G-ZQ0"/>
                         <outlet property="segmentControl" destination="OZo-T1-lWL" id="rTF-Bk-FaL"/>

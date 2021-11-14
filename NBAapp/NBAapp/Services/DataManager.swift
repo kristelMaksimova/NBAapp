@@ -10,7 +10,7 @@ import Foundation
 class DataManager {
     static let shared = DataManager()
     
-    //MARK: - news array
+    //MARK: - News
     let news: [[String: String]] = [
         ["Id": "1",
          "Title": "Lavigne and DeRozan repeated the achievement of Jordan and Pippen",
@@ -104,7 +104,7 @@ class DataManager {
          "Image": "image15"]
         ]
     
-    //MARK: - games
+    //MARK: - Games
     let games: [[String : String]] = [
         ["id": "1",
          "Score": "112-104",
@@ -243,7 +243,7 @@ class DataManager {
          "Date": "11-06-2021"]
     ]
     
-    //MARK: - teams
+    //MARK: - Teams
     let teams: [[String: String]] = [
         ["id": "1",
          "teamName": "Celtics",
@@ -352,7 +352,7 @@ class DataManager {
          "logoImage": "lazz-logo"],
     ]
     
-    //MARK: - teamsLineUps
+    //MARK: - Lineups
     let teamsLineUps: [String: [String]] = [
         "Celtics": ["Jayson Tatum","Jaylen Brown","Josh Richardson","Romeo Langford","Payton Pritchard","Grant Williams","Enes Kanter","Jabari Parker","Aaron Nesmith","Bruno Fernando"],
         "Bulls": ["Coby White","Lonzo Ball","Devon Dotson","Derrick Jones Jr.","Alex Caruso","Troy Brown Jr.","Zach LaVine","Nikola Vucevic","DeMar DeRozan","Ayo Dosunmu"],
@@ -369,6 +369,17 @@ class DataManager {
         "Suns": ["Jayson Tatum","Jaylen Brown","Josh Richardson","Romeo Langford","Payton Pritchard","Grant Williams","Enes Kanter","Jabari Parker","Aaron Nesmith","Bruno Fernando"],
         "Pelicans": ["Coby White","Lonzo Ball","Devon Dotson","Derrick Jones Jr.","Alex Caruso","Troy Brown Jr.","Zach LaVine","Nikola Vucevic","DeMar DeRozan","Ayo Dosunmu"],
         "Jazz": ["Chris Smith", "Cade Cunningham", "Frank Jackson", "Hamidou Diallo", "Killian Hayes", "Trey Lyles", "Jerami Grant", "Isaiah Livers", "Kelly Olynyk", "Rodney McGruder"]
+    ]
+    
+    let developers: [[String: String]] = [
+        ["id": "0",
+         "first name": "Stanislav",
+         "last name": "Buinovsky",
+         "role": "Team lead, developer",
+         "responsibility": "Project initialization, Git control",
+         "email": "madracing@yandex.ru",
+         "telegram": "SBuinovsky",
+         "github": "github.com"]
     ]
     
     private init() {}

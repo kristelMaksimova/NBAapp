@@ -9,6 +9,7 @@ import UIKit
 
 class TeamDetailedController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //MARK: - IBOutlets
     @IBOutlet weak var teamLogoImageView: UIImageView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var profileView: UIView!
@@ -16,18 +17,17 @@ class TeamDetailedController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var foundedLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var arenaLabel: UILabel!
-    @IBOutlet weak var headCoach: UILabel!
+    @IBOutlet weak var headCoachLabel: UILabel!
     
+    //MARK: - Public properties
     var team: Team!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.title = team.teamNameFull
-        teamLogoImageView.image = UIImage(named: team.logoImage)
-        foundedLabel.text = team.founded
-        cityLabel.text = team.city
-        arenaLabel.text = team.arena
-        headCoach.text = team.headCoach
+        setImages()
+        setLabels()
     }
     
     //MARK: - TableView data source
@@ -46,8 +46,7 @@ class TeamDetailedController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
-    
-    
+    //MARK: - IBActions
     @IBAction func segmentControlChanged() {
         switch segmentControl.selectedSegmentIndex{
         case 0:
@@ -60,6 +59,18 @@ class TeamDetailedController: UIViewController, UITableViewDataSource, UITableVi
             profileView.isHidden = true
             lineupTableView.isHidden = true
         }
+    }
+    
+    //MARK: - Private methods
+    private func setImages() {
+        teamLogoImageView.image = UIImage(named: team.logoImage)
+    }
+    
+    private func setLabels() {
+        foundedLabel.text = team.founded
+        cityLabel.text = team.city
+        arenaLabel.text = team.arena
+        headCoachLabel.text = team.headCoach
     }
     
 }

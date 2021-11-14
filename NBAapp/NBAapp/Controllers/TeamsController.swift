@@ -9,12 +9,15 @@ import UIKit
 
 class TeamsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
+    //MARK: - Public properties
     let teams = Team.getTeams()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         tabBarController?.title = "Teams"
     }
     
@@ -33,6 +36,7 @@ class TeamsController: UIViewController, UITableViewDataSource, UITableViewDeleg
         return cell
     }
     
+    //MARK: - TableView delegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
