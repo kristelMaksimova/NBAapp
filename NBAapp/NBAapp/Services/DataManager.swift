@@ -292,7 +292,7 @@ class DataManager {
         ["id": "3",
          "teamName": "Hawks",
          "Founded": "1966",
-         "City": "Chicago",
+         "City": "Atlanta",
          "Arena": "United Center",
          "Head Coach": "Billy Donovan",
          "logoImage": "hawks-logo"],
@@ -382,7 +382,7 @@ class DataManager {
          "logoImage": "lazz-logo"],
     ]
     
-    //MARK: - teamsLineUps
+    //MARK: - Lineups
     let teamsLineUps: [String: [String]] = [
         "Celtics": ["Jayson Tatum","Jaylen Brown","Josh Richardson","Romeo Langford","Payton Pritchard","Grant Williams","Enes Kanter","Jabari Parker","Aaron Nesmith","Bruno Fernando"],
         "Bulls": ["Coby White","Lonzo Ball","Devon Dotson","Derrick Jones Jr.","Alex Caruso","Troy Brown Jr.","Zach LaVine","Nikola Vucevic","DeMar DeRozan","Ayo Dosunmu"],
@@ -399,6 +399,33 @@ class DataManager {
         "Suns": ["Jayson Tatum","Jaylen Brown","Josh Richardson","Romeo Langford","Payton Pritchard","Grant Williams","Enes Kanter","Jabari Parker","Aaron Nesmith","Bruno Fernando"],
         "Pelicans": ["Coby White","Lonzo Ball","Devon Dotson","Derrick Jones Jr.","Alex Caruso","Troy Brown Jr.","Zach LaVine","Nikola Vucevic","DeMar DeRozan","Ayo Dosunmu"],
         "Jazz": ["Chris Smith", "Cade Cunningham", "Frank Jackson", "Hamidou Diallo", "Killian Hayes", "Trey Lyles", "Jerami Grant", "Isaiah Livers", "Kelly Olynyk", "Rodney McGruder"]
+    ]
+    
+    let developers: [[String: String]] = [
+        ["id": "0",
+         "first name": "Stanislav",
+         "last name": "Buinovsky",
+         "roles": "Team lead, developer",
+         "responsibility": "Project initialization, Git control, Teams and Developers scenes",
+         "telegram": "SBuinovsky",
+         "github": "https://github.com/sbuinovsky",
+         "photo": "buinovsky"],
+        ["id": "1",
+         "first name": "Ruslan",
+         "last name": "Safin",
+         "roles": "Developer",
+         "responsibility": "Games scene",
+         "telegram": "Flea_Q",
+         "github": "github.com",
+         "photo": "safin"],
+        ["id": "2",
+         "first name": "Kristel",
+         "last name": "Maksimova",
+         "roles": "Developer",
+         "responsibility": "News scene",
+         "telegram": "Kristel Maksimova",
+         "github": "github.com",
+         "photo": "maksimova"]
     ]
     private init() {}
 }

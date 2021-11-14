@@ -19,6 +19,13 @@
 		C20E2B00273E5705009A194D /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E2AFF273E5705009A194D /* Games.storyboard */; };
 		C20E2B02273E571E009A194D /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E2B01273E571E009A194D /* News.storyboard */; };
 		C20E2B04273E6753009A194D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E2B03273E6753009A194D /* DataManager.swift */; };
+		C23ADB5F273FEE7D0090A6C3 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23ADB5E273FEE7D0090A6C3 /* Team.swift */; };
+		C23ADB61273FF3A80090A6C3 /* TeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23ADB60273FF3A80090A6C3 /* TeamsController.swift */; };
+		C23D27452740E21800FD864A /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23D27442740E21800FD864A /* Developer.swift */; };
+		C29ABEDB274029EA0063AF17 /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29ABEDA274029EA0063AF17 /* TeamsTableViewCell.swift */; };
+		C29ABEDD27402EFA0063AF17 /* TeamDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29ABEDC27402EFA0063AF17 /* TeamDetailedController.swift */; };
+		C2A986432740CE7800DDBC43 /* DevelopersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A986422740CE7800DDBC43 /* DevelopersController.swift */; };
+		C2A986452741187400DDBC43 /* DeveloperDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A986442741187400DDBC43 /* DeveloperDetailedController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +43,13 @@
 		C20E2AFF273E5705009A194D /* Games.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Games.storyboard; sourceTree = "<group>"; };
 		C20E2B01273E571E009A194D /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		C20E2B03273E6753009A194D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		C23ADB5E273FEE7D0090A6C3 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		C23ADB60273FF3A80090A6C3 /* TeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsController.swift; sourceTree = "<group>"; };
+		C23D27442740E21800FD864A /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
+		C29ABEDA274029EA0063AF17 /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
+		C29ABEDC27402EFA0063AF17 /* TeamDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailedController.swift; sourceTree = "<group>"; };
+		C2A986422740CE7800DDBC43 /* DevelopersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersController.swift; sourceTree = "<group>"; };
+		C2A986442741187400DDBC43 /* DeveloperDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperDetailedController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				4B4EE7D227405EF300547272 /* GamesModel.swift */,
+				C23ADB5E273FEE7D0090A6C3 /* Team.swift */,
+				C23D27442740E21800FD864A /* Developer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,6 +120,11 @@
 				4B4EE7D427405F3B00547272 /* GamesController.swift */,
 				4B4EE7D8274067EA00547272 /* GameDetailedController.swift */,
 				4B4EE7D62740677700547272 /* GamesTableViewCell.swift */,
+				C23ADB60273FF3A80090A6C3 /* TeamsController.swift */,
+				C29ABEDA274029EA0063AF17 /* TeamsTableViewCell.swift */,
+				C29ABEDC27402EFA0063AF17 /* TeamDetailedController.swift */,
+				C2A986422740CE7800DDBC43 /* DevelopersController.swift */,
+				C2A986442741187400DDBC43 /* DeveloperDetailedController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -198,12 +219,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C23D27452740E21800FD864A /* Developer.swift in Sources */,
+				C23ADB5F273FEE7D0090A6C3 /* Team.swift in Sources */,
 				C20E2B04273E6753009A194D /* DataManager.swift in Sources */,
 				4B4EE7D9274067EA00547272 /* GameDetailedController.swift in Sources */,
 				4B4EE7D72740677700547272 /* GamesTableViewCell.swift in Sources */,
 				4B4EE7D327405EF300547272 /* GamesModel.swift in Sources */,
 				C20E2AE7273E54A8009A194D /* AppDelegate.swift in Sources */,
 				4B4EE7D527405F3B00547272 /* GamesController.swift in Sources */,
+				C2A986432740CE7800DDBC43 /* DevelopersController.swift in Sources */,
+				C2A986452741187400DDBC43 /* DeveloperDetailedController.swift in Sources */,
+				C29ABEDB274029EA0063AF17 /* TeamsTableViewCell.swift in Sources */,
+				C20E2AE7273E54A8009A194D /* AppDelegate.swift in Sources */,
+				C29ABEDD27402EFA0063AF17 /* TeamDetailedController.swift in Sources */,
+				C23ADB61273FF3A80090A6C3 /* TeamsController.swift in Sources */,
 				C20E2AE9273E54A8009A194D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
