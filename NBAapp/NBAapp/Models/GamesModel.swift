@@ -7,22 +7,25 @@
 
 import UIKit
 
+//MARK: - Model
 struct Game {
     let id: Int
     let score: String
     let city: String
     let arena: String
+    let arenaPhoto: String
     let attackers: String
     let defenders: String
     let topPlayer: String
+    let topPlayerPhoto: String
     let winner: String
     let logoAttack: String
     let logoDeff: String
     let date: String
 }
 
+//MARK: - Extension
 extension Game {
-    
     static func getGames() -> [Game] {
         var arrayOfGames: [Game] = []
         let dataManager = DataManager.shared
@@ -35,9 +38,11 @@ extension Game {
             let score = game["Score"] ?? ""
             let city = game["City"] ?? ""
             let arena = game["Arena"] ?? ""
+            let arenaPhoto = game["ArenaPhoto"] ?? ""
             let attackers = game["Attackers"] ?? ""
             let defenders = game["Defenders"] ?? ""
             let topPlayer = game["TopPlayer"] ?? ""
+            let topPlayerPhoto = game["TopPlayerPhoto"] ?? ""
             let winner = game["Winner"] ?? ""
             let date = game["Date"] ?? ""
             var logoAttack = ""
@@ -57,9 +62,11 @@ extension Game {
                             score: score,
                             city: city,
                             arena: arena,
+                            arenaPhoto: arenaPhoto,
                             attackers: attackers,
                             defenders: defenders,
                             topPlayer: topPlayer,
+                            topPlayerPhoto: topPlayerPhoto,
                             winner: winner,
                             logoAttack: logoAttack,
                             logoDeff: logoDeff,
