@@ -9,6 +9,7 @@ import UIKit
 
 class DeveloperDetailedController: UIViewController {
 
+    //MARK: - IBOutlets
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var rolesLabel: UILabel!
     @IBOutlet weak var responsibilityLabel: UILabel!
@@ -26,6 +27,7 @@ class DeveloperDetailedController: UIViewController {
         setLabels()
     }
 
+    //MARK: - Private methods
     private func setImages() {
         photoImageView.image = UIImage(named: developer.photo)
         let height = photoImageView.bounds.size.height

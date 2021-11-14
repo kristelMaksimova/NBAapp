@@ -9,6 +9,7 @@ import UIKit
 
 class DevelopersController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
     let developers = Developer.getDevelopers()
@@ -19,6 +20,7 @@ class DevelopersController: UIViewController, UITableViewDataSource, UITableView
         tabBarController?.title = "Developers"
     }
     
+    //MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         developers.count
     }
@@ -43,6 +45,7 @@ class DevelopersController: UIViewController, UITableViewDataSource, UITableView
         100
     }
     
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let developerDetailedVC = segue.destination as? DeveloperDetailedController else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
