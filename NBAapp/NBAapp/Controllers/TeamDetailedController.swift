@@ -26,6 +26,7 @@ class TeamDetailedController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         navigationItem.title = team.teamNameFull
+        
         setImages()
         setLabels()
     }

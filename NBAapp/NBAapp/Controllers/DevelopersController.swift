@@ -9,6 +9,8 @@ import UIKit
 
 class DevelopersController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     let developers = Developer.getDevelopers()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,9 +29,11 @@ class DevelopersController: UIViewController, UITableViewDataSource, UITableView
         let developer = developers[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
-        content.image = UIImage(named: "bulls-logo")
+        content.image = UIImage(named: developer.photo)
+        content.imageProperties.cornerRadius = cell.frame.height / 2
         content.text = developer.fullName
-        content.secondaryText = developer.role
+        content.secondaryText = developer.roles.joined(separator: ", ")
+        
         cell.contentConfiguration = content
         
         return cell
@@ -37,5 +41,13 @@ class DevelopersController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let developerDetailedVC = segue.destination as? DeveloperDetailedController else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let developer = developers[indexPath.row]
+        developerDetailedVC.developer = developer
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }

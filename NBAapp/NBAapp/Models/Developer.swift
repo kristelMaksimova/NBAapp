@@ -11,11 +11,11 @@ struct Developer {
     let id: Int
     let firstName: String
     let lastName: String
-    let role: String
+    let roles: [String]
     let responsibility: [String]
-    let email: String
     let telegram: String
     let github: String
+    let photo: String
     
     var fullName: String {
         "\(firstName) \(lastName)"
@@ -30,20 +30,20 @@ struct Developer {
             let id = Int(developer["id"] ?? "") ?? 0
             let firstName = developer["first name"] ?? ""
             let lastName = developer["last name"] ?? ""
-            let role = developer["role"] ?? ""
-            let responsibility = developer["responsibility"] ?? ""
-            let email = developer["email"] ?? ""
+            let roles = developer["roles"]?.components(separatedBy: ", ") ?? []
+            let responsibility = developer["responsibility"]?.components(separatedBy: ", ") ?? []
             let telegram = developer["telegram"] ?? ""
             let github = developer["github"] ?? ""
+            let photo = developer["photo"] ?? ""
             
             let dev = Developer(id: id,
                                 firstName: firstName,
                                 lastName: lastName,
-                                role: role,
-                                responsibility: [responsibility],
-                                email: email,
+                                roles: roles,
+                                responsibility: responsibility,
                                 telegram: telegram,
-                                github: github)
+                                github: github,
+                                photo: photo)
             result.append(dev)
         }
         

@@ -375,11 +375,27 @@ class DataManager {
         ["id": "0",
          "first name": "Stanislav",
          "last name": "Buinovsky",
-         "role": "Team lead, developer",
-         "responsibility": "Project initialization, Git control",
-         "email": "madracing@yandex.ru",
+         "roles": "Team lead, developer",
+         "responsibility": "Project initialization, Git control, Teams and Developers scenes",
          "telegram": "SBuinovsky",
-         "github": "github.com"]
+         "github": "https://github.com/sbuinovsky",
+         "photo": "buinovsky"],
+        ["id": "0",
+         "first name": "Ruslan",
+         "last name": "Safin",
+         "roles": "Developer",
+         "responsibility": "Games scene",
+         "telegram": "Flea_Q",
+         "github": "github.com",
+         "photo": "safin"],
+        ["id": "0",
+         "first name": "Kristel",
+         "last name": "Maksimova",
+         "roles": "Developer",
+         "responsibility": "News scene",
+         "telegram": "Kristel Maksimova",
+         "github": "github.com",
+         "photo": "maksimova"]
     ]
     
     private init() {}
