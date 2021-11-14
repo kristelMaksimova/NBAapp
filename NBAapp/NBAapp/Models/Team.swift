@@ -25,7 +25,6 @@ struct Team {
         let dataManager = DataManager.shared
         let teamsList = dataManager.teams
         let lineUps = dataManager.teamsLineUps
-        let results = dataManager.games
         
         for team in teamsList {
             let id = Int(team["id"] ?? "") ?? 0
