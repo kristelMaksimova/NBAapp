@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B4EE7D327405EF300547272 /* GamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EE7D227405EF300547272 /* GamesModel.swift */; };
+		4B4EE7D527405F3B00547272 /* GamesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EE7D427405F3B00547272 /* GamesController.swift */; };
+		4B4EE7D72740677700547272 /* GamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EE7D62740677700547272 /* GamesTableViewCell.swift */; };
+		4B4EE7D9274067EA00547272 /* GameDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EE7D8274067EA00547272 /* GameDetailedController.swift */; };
 		C20E2AE7273E54A8009A194D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E2AE6273E54A8009A194D /* AppDelegate.swift */; };
 		C20E2AE9273E54A8009A194D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E2AE8273E54A8009A194D /* SceneDelegate.swift */; };
 		C20E2AEE273E54A8009A194D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E2AEC273E54A8009A194D /* Main.storyboard */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B4EE7D227405EF300547272 /* GamesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesModel.swift; sourceTree = "<group>"; };
+		4B4EE7D427405F3B00547272 /* GamesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesController.swift; sourceTree = "<group>"; };
+		4B4EE7D62740677700547272 /* GamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewCell.swift; sourceTree = "<group>"; };
+		4B4EE7D8274067EA00547272 /* GameDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailedController.swift; sourceTree = "<group>"; };
 		C20E2AE3273E54A8009A194D /* NBAapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C20E2AE6273E54A8009A194D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C20E2AE8273E54A8009A194D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +82,7 @@
 		C20E2AFA273E54FD009A194D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4B4EE7D227405EF300547272 /* GamesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,6 +101,9 @@
 		C20E2AFC273E550C009A194D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B4EE7D427405F3B00547272 /* GamesController.swift */,
+				4B4EE7D8274067EA00547272 /* GameDetailedController.swift */,
+				4B4EE7D62740677700547272 /* GamesTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,7 +199,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C20E2B04273E6753009A194D /* DataManager.swift in Sources */,
+				4B4EE7D9274067EA00547272 /* GameDetailedController.swift in Sources */,
+				4B4EE7D72740677700547272 /* GamesTableViewCell.swift in Sources */,
+				4B4EE7D327405EF300547272 /* GamesModel.swift in Sources */,
 				C20E2AE7273E54A8009A194D /* AppDelegate.swift in Sources */,
+				4B4EE7D527405F3B00547272 /* GamesController.swift in Sources */,
 				C20E2AE9273E54A8009A194D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,18 +359,19 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sbuinovsky.NBAapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -371,18 +388,19 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sbuinovsky.NBAapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
