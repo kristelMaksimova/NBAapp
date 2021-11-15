@@ -16,5 +16,4 @@ class TeamsTableViewCell: UITableViewCell {
         teamLogoImageView.image = UIImage(named: team.logoImage)
         teamNameLabel.text = team.teamNameFull
     }
-
 }

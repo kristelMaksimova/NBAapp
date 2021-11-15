@@ -9,15 +9,17 @@ import UIKit
 
 class DeveloperDetailedController: UIViewController {
 
-    //MARK: - IBOutlets
+    //MARK: - Outlets
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var rolesLabel: UILabel!
     @IBOutlet weak var responsibilityLabel: UILabel!
     @IBOutlet weak var telegramLabel: UILabel!
     @IBOutlet weak var githubLabel: UILabel!
     
+    //MARK: - Public properties
     var developer: Developer!
     
+    //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,5 +47,4 @@ class DeveloperDetailedController: UIViewController {
         githubLabel.text = "GitHub:\n" + developer.github
         
     }
-
 }
