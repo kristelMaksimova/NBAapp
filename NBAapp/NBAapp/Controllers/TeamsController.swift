@@ -7,9 +7,9 @@
 
 import UIKit
 
-class TeamsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TeamsController: UIViewController {
     
-    //MARK: - IBOutlets
+    //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - Public properties
@@ -20,6 +20,10 @@ class TeamsController: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         tabBarController?.title = "Teams"
     }
+}
+
+//MARK: - Extension
+extension TeamsController: UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - TableView data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,5 +54,3 @@ class TeamsController: UIViewController, UITableViewDataSource, UITableViewDeleg
         tableView.deselectRow(at: indexPath, animated: false)
     }
 }
-
-

@@ -7,18 +7,24 @@
 
 import UIKit
 
-class DevelopersController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DevelopersController: UIViewController {
     
-    //MARK: - IBOutlets
+    //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    //MARK: - Public properties
     let developers = Developer.getDevelopers()
     
+    //MARK: - Override
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         tabBarController?.title = "Developers"
     }
+}
+
+//MARK: - Extension
+extension DevelopersController: UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
