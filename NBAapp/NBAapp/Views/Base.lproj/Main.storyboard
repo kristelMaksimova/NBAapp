@@ -176,9 +176,19 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6bT-Qp-dVT">
+                                                    <rect key="frame" x="374" y="11.5" width="20" height="20"/>
+                                                    <color key="tintColor" red="0.094117648900000003" green="0.25098040700000002" blue="0.5411764979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="yfr-h8-X6e"/>
+                                                        <constraint firstAttribute="width" secondItem="6bT-Qp-dVT" secondAttribute="height" multiplier="1:1" id="zck-MG-6vQ"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="6bT-Qp-dVT" firstAttribute="centerY" secondItem="juL-eR-6Oz" secondAttribute="centerY" id="0sR-JZ-bmI"/>
                                                 <constraint firstItem="URU-8w-4Zs" firstAttribute="centerY" secondItem="juL-eR-6Oz" secondAttribute="centerY" id="8dq-TD-wil"/>
+                                                <constraint firstAttribute="trailing" secondItem="6bT-Qp-dVT" secondAttribute="trailing" constant="20" id="C9Q-iv-OfL"/>
                                                 <constraint firstItem="URU-8w-4Zs" firstAttribute="leading" secondItem="juL-eR-6Oz" secondAttribute="leading" constant="20" id="Jkr-78-xoE"/>
                                                 <constraint firstAttribute="trailing" secondItem="iWB-xF-f7I" secondAttribute="trailing" constant="20" id="Jyj-na-QxT"/>
                                                 <constraint firstItem="iWB-xF-f7I" firstAttribute="leading" secondItem="URU-8w-4Zs" secondAttribute="trailing" constant="20" id="U3H-Dq-k6D"/>
@@ -186,6 +196,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="favoriteImageView" destination="6bT-Qp-dVT" id="pYo-ej-eZg"/>
                                             <outlet property="teamLogoImageView" destination="URU-8w-4Zs" id="7kM-Ma-QwS"/>
                                             <outlet property="teamNameLabel" destination="iWB-xF-f7I" id="5tp-hd-NAR"/>
                                             <segue destination="cBU-ta-aCT" kind="show" id="cQ5-aD-0HE"/>
@@ -356,10 +367,17 @@
                     </view>
                     <navigationItem key="navigationItem" title="TeamName" id="D8G-76-lor">
                         <barButtonItem key="backBarButtonItem" title="Back" id="YHG-Vb-MVv"/>
+                        <barButtonItem key="rightBarButtonItem" title="Favorite" image="star" catalog="system" id="81l-Lh-N4l">
+                            <color key="tintColor" red="0.094117648900000003" green="0.25098040700000002" blue="0.5411764979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="favoriteButtonPressed:" destination="cBU-ta-aCT" id="TQB-jo-xYA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="arenaLabel" destination="FI8-le-D88" id="gm6-jN-tif"/>
                         <outlet property="cityLabel" destination="4U2-l4-Hgc" id="zgZ-Xn-wkg"/>
+                        <outlet property="favoriteButton" destination="81l-Lh-N4l" id="vHo-l4-Zkk"/>
                         <outlet property="foundedLabel" destination="AF5-bh-XUl" id="Spl-KY-Y1x"/>
                         <outlet property="headCoachLabel" destination="EFQ-bQ-Tpc" id="UUk-93-1h1"/>
                         <outlet property="lineupTableView" destination="ZvD-Sm-zcn" id="vnR-hR-4NG"/>
@@ -421,6 +439,8 @@
         <image name="brain.head.profile" catalog="system" width="114" height="128"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
         <image name="sportscourt" catalog="system" width="128" height="84"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="tshirt" catalog="system" width="128" height="99"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

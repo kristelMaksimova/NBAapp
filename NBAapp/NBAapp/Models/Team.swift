@@ -16,6 +16,7 @@ struct Team {
     let headCoach: String
     let logoImage: String
     let lineup: [String]
+    var isFavourite = false
     
     var teamNameFull: String {
         "\(city) \(teamName)"
