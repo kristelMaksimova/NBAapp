@@ -5,9 +5,8 @@
 //  Created by Руслан Сафин on 13.11.2021.
 //
 
-import UIKit
+import Foundation
 
-//MARK: - Model
 struct Game {
     let id: Int
     let score: String
@@ -22,10 +21,7 @@ struct Game {
     let logoAttack: String
     let logoDeff: String
     let date: String
-}
-
-//MARK: - Extension
-extension Game {
+    
     static func getGames() -> [Game] {
         var arrayOfGames: [Game] = []
         let dataManager = DataManager.shared
@@ -33,7 +29,6 @@ extension Game {
         let teams = dataManager.teams
         
         for game in games {
-            
             let id = Int(game["id"] ?? "") ?? 0
             let score = game["Score"] ?? ""
             let city = game["City"] ?? ""
@@ -49,11 +44,11 @@ extension Game {
             var logoDeff = ""
             
             for team in teams {
-                let teams = team["teamName"] ?? ""
+                let currentTeam = team["teamName"] ?? ""
                 
-                if teams == attackers {
+                if currentTeam == attackers {
                     logoAttack = team["logoImage"] ?? ""
-                } else if teams == defenders {
+                } else if currentTeam == defenders {
                     logoDeff = team["logoImage"] ?? ""
                 }
             }
@@ -73,6 +68,7 @@ extension Game {
                             date: date)
             arrayOfGames.append(game)
         }
+        
         return arrayOfGames
     }
 }

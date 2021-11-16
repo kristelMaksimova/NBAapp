@@ -9,9 +9,6 @@ import UIKit
 
 class GameDetailedController: UIViewController {
     
-    //MARK: - Properties
-    var game: Game!
-    
     //MARK: - IBOutlets
     @IBOutlet weak var arenaImageView: UIImageView!
     @IBOutlet weak var attackTeamLogo: UIImageView!
@@ -26,25 +23,37 @@ class GameDetailedController: UIViewController {
     @IBOutlet weak var topPlayerPhoto: UIImageView!
     @IBOutlet weak var topPlayerLabel: UILabel!
     
-    //MARK: - Override methods
+    //MARK: - Public properties
+    var game: Game!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "\(game.attackers) vs. \(game.defenders)"
         
+        setImages()
+        setLabels()
+    }
+}
+
+extension GameDetailedController {
+    
+    //MARK: - Private methods
+    private func setImages() {
         arenaImageView.image = UIImage(named: game.arenaPhoto)
+        attackTeamLogo.image = UIImage(named: game.logoAttack)
+        deffTeamLogo.image = UIImage(named: game.logoDeff)
+        topPlayerPhoto.image = UIImage(named: game.topPlayerPhoto)
+        topPlayerPhoto.layer.cornerRadius = topPlayerPhoto.frame.width / 2
+    }
+    
+    private func setLabels() {
         arenaLabel.text = game.arena
         dateLabel.text = game.date
-        
-        attackTeamLogo.image = UIImage(named: game.logoAttack)
         attackTeamLabel.text = game.attackers
-        deffTeamLogo.image = UIImage(named: game.logoDeff)
         deffTeamLabel.text = game.defenders
         gameScore.text = game.score
         cityLabel.text = game.city
         winnerLabel.text = game.winner
-        
         topPlayerLabel.text = game.topPlayer
-        topPlayerPhoto.image = UIImage(named: game.topPlayerPhoto)
-        topPlayerPhoto.layer.cornerRadius = topPlayerPhoto.frame.width / 2
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TeamsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TeamsController: UIViewController {
     
     //MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -17,9 +17,11 @@ class TeamsController: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         tabBarController?.title = "Teams"
     }
+}
+
+extension TeamsController: UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - TableView data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,7 +30,6 @@ class TeamsController: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "teamCell", for: indexPath) as! TeamsTableViewCell
-        
         let model = teams[indexPath.row]
         
         cell.configure(with: model)
@@ -45,10 +46,10 @@ class TeamsController: UIViewController, UITableViewDataSource, UITableViewDeleg
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let teamDetailedVC = segue.destination as? TeamDetailedController else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        
         let model = teams[indexPath.row]
         teamDetailedVC.team = model
+        
         tableView.deselectRow(at: indexPath, animated: false)
     }
 }
-
-

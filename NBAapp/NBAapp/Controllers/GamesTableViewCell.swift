@@ -16,7 +16,6 @@ class GamesTableViewCell: UITableViewCell {
     @IBOutlet weak var teamTwoImage: UIImageView!
     @IBOutlet weak var totalScore: UILabel!
     
-    //MARK: - Methods
     func configure(with game: Game) {
         teamOneLabel.text = game.attackers
         teamTwoLabel.text = game.defenders

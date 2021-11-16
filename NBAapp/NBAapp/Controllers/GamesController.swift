@@ -7,15 +7,14 @@
 
 import UIKit
 
-class GamesController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class GamesController: UIViewController {
     
     //MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
-    //MARK: - Properties
+    //MARK: - Public properties
     let games = Game.getGames().shuffled()
     
-    //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -26,8 +25,12 @@ class GamesController: UIViewController, UITableViewDelegate, UITableViewDataSou
         super.viewWillAppear(animated)
         tabBarController?.title = "Games"
     }
+}
+
+//MARK: - Extension
+extension GamesController: UITableViewDelegate, UITableViewDataSource {
     
-    //MARK: - Methods
+    //MARK: - TableView data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         games.count
     }
@@ -41,13 +44,12 @@ class GamesController: UIViewController, UITableViewDelegate, UITableViewDataSou
         return cell
     }
     
+    //MARK: - TableView delegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
-}
-
-//MARK: - Extension
-extension GamesController {
+    
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let gameDetailedlVC = segue.destination as? GameDetailedController else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }

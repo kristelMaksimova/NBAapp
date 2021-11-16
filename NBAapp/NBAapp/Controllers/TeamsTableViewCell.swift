@@ -8,7 +8,8 @@
 import UIKit
 
 class TeamsTableViewCell: UITableViewCell {
-
+    
+    //MARK: - IBOutlets
     @IBOutlet weak var teamLogoImageView: UIImageView!
     @IBOutlet weak var teamNameLabel: UILabel!
     
@@ -16,5 +17,4 @@ class TeamsTableViewCell: UITableViewCell {
         teamLogoImageView.image = UIImage(named: team.logoImage)
         teamNameLabel.text = team.teamNameFull
     }
-
 }

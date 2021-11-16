@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TeamDetailedController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TeamDetailedController: UIViewController {
     
     //MARK: - IBOutlets
     @IBOutlet weak var teamLogoImageView: UIImageView!
@@ -24,28 +24,14 @@ class TeamDetailedController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationItem.title = team.teamNameFull
         
         setImages()
         setLabels()
     }
-    
-    //MARK: - TableView data source
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        team.lineup.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "lineupCell", for: indexPath)
-        
-        var content = cell.defaultContentConfiguration()
-        content.text = team.lineup[indexPath.row]
-        
-        cell.contentConfiguration = content
-        
-        return cell
-    }
+}
+
+extension TeamDetailedController: UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - IBActions
     @IBAction func segmentControlChanged() {
@@ -62,6 +48,21 @@ class TeamDetailedController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
+    //MARK: - TableView data source
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        team.lineup.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "lineupCell", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        
+        content.text = team.lineup[indexPath.row]
+        cell.contentConfiguration = content
+        
+        return cell
+    }
+    
     //MARK: - Private methods
     private func setImages() {
         teamLogoImageView.image = UIImage(named: team.logoImage)
@@ -73,5 +74,4 @@ class TeamDetailedController: UIViewController, UITableViewDataSource, UITableVi
         arenaLabel.text = team.arena
         headCoachLabel.text = team.headCoach
     }
-    
 }

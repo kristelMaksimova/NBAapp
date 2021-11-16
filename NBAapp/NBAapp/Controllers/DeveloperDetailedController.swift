@@ -8,7 +8,7 @@
 import UIKit
 
 class DeveloperDetailedController: UIViewController {
-
+    
     //MARK: - IBOutlets
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var rolesLabel: UILabel!
@@ -16,17 +16,20 @@ class DeveloperDetailedController: UIViewController {
     @IBOutlet weak var telegramLabel: UILabel!
     @IBOutlet weak var githubLabel: UILabel!
     
+    //MARK: - Public properties
     var developer: Developer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         navigationItem.title = developer.fullName
         
         setImages()
         setLabels()
     }
+}
 
+extension DeveloperDetailedController {
+    
     //MARK: - Private methods
     private func setImages() {
         photoImageView.image = UIImage(named: developer.photo)
@@ -45,5 +48,4 @@ class DeveloperDetailedController: UIViewController {
         githubLabel.text = "GitHub:\n" + developer.github
         
     }
-
 }
