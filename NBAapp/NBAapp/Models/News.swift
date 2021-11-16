@@ -17,7 +17,7 @@ struct News {
 
 extension News {
     static func getNews() -> [News] {
-        var changeNews: [News] = []
+        var resultNews: [News] = []
         let newsList = DataManager.shared.news.shuffled()
     
         for news in newsList {
@@ -33,8 +33,8 @@ extension News {
                             source: source,
                             date: date,
                             image: image)
-            changeNews.append(news)
+            resultNews.append(news)
         }
-      return changeNews
+      return resultNews
     }
 }
