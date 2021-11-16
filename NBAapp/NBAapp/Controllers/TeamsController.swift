@@ -7,13 +7,17 @@
 
 import UIKit
 
+protocol TeamDetailedDelegate {
+    func updateModel(with: Team, byIndex: Int)
+}
+
 class TeamsController: UIViewController {
     
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - Public properties
-    let teams = Team.getTeams()
+    var teams = Team.getTeams()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -50,7 +54,16 @@ extension TeamsController: UITableViewDataSource, UITableViewDelegate {
         
         let model = teams[indexPath.row]
         teamDetailedVC.team = model
+        teamDetailedVC.rowIndex = indexPath.row
+        teamDetailedVC.delegate = self
         
         tableView.deselectRow(at: indexPath, animated: false)
+    }
+}
+
+extension TeamsController: TeamDetailedDelegate {
+    func updateModel(with team: Team, byIndex index: Int) {
+        teams[index].isFavourite = team.isFavourite
+        tableView.reloadData()
     }
 }

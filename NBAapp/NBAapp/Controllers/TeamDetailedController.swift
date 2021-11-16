@@ -10,6 +10,7 @@ import UIKit
 class TeamDetailedController: UIViewController {
     
     //MARK: - Outlets
+    @IBOutlet weak var favoriteButton: UIBarButtonItem!
     @IBOutlet weak var teamLogoImageView: UIImageView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var profileView: UIView!
@@ -21,6 +22,8 @@ class TeamDetailedController: UIViewController {
     
     //MARK: - Public properties
     var team: Team!
+    var rowIndex: Int!
+    var delegate: TeamsController!
     
     //MARK: - Override
     override func viewDidLoad() {
@@ -28,6 +31,7 @@ class TeamDetailedController: UIViewController {
         
         navigationItem.title = team.teamNameFull
         
+        setButtons()
         setImages()
         setLabels()
     }
@@ -44,7 +48,25 @@ class TeamDetailedController: UIViewController {
         }
     }
     
+    @IBAction func favoriteButtonPressed(_ sender: Any) {
+        if team.isFavourite {
+            team.isFavourite = false
+        } else {
+            team.isFavourite = true
+        }
+        setButtons()
+        delegate.updateModel(with: team, byIndex: rowIndex)
+    }
+    
     //MARK: - Private methods
+    private func setButtons() {
+        if team.isFavourite {
+            favoriteButton.image = UIImage(systemName: "star.fill")
+        } else {
+            favoriteButton.image = UIImage(systemName: "star")
+        }
+    }
+    
     private func setImages() {
         teamLogoImageView.image = UIImage(named: team.logoImage)
     }
@@ -55,7 +77,6 @@ class TeamDetailedController: UIViewController {
         arenaLabel.text = team.arena
         headCoachLabel.text = team.headCoach
     }
-    
 }
 
 //MARK: - Extension
