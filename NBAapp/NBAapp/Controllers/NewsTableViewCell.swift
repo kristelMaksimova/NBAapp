@@ -9,15 +9,28 @@ import UIKit
 
 class NewsTableViewCell: UITableViewCell {
     
+    //MARK: - Outlets
     @IBOutlet var imageNews: UIImageView!
     @IBOutlet var titleNews: UILabel!
     @IBOutlet var subtitleNews: UILabel!
     
-    
-    
     func configure(with news: News) {
         titleNews.text = news.title
-        subtitleNews.text = news.subtitle
         imageNews.image = UIImage(named: news.image)
+        textLimitation(with: news)
+    }
+    
+    //MARK: - Private methods
+    private func textLimitation(with news: News) {
+        
+        var shortTextNews = news.subtitle
+        
+        if shortTextNews.count >= 250 {
+            while shortTextNews.count >= 250 {
+                shortTextNews.remove(at: shortTextNews.index(before: shortTextNews.endIndex))
+            }
+            shortTextNews.append("...")
+        }
+        subtitleNews.text = shortTextNews
     }
 }
