@@ -22,13 +22,15 @@ class DeveloperDetailedController: UIViewController {
     //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
-
         navigationItem.title = developer.fullName
         
         setImages()
         setLabels()
     }
+}
 
+extension DeveloperDetailedController {
+    
     //MARK: - Private methods
     private func setImages() {
         photoImageView.image = UIImage(named: developer.photo)

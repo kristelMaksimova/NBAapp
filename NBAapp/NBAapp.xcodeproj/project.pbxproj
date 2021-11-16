@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B4EE7D327405EF300547272 /* GamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EE7D227405EF300547272 /* GamesModel.swift */; };
+		4B4EE7D327405EF300547272 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EE7D227405EF300547272 /* Games.swift */; };
 		4B4EE7D527405F3B00547272 /* GamesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EE7D427405F3B00547272 /* GamesController.swift */; };
 		4B4EE7D72740677700547272 /* GamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EE7D62740677700547272 /* GamesTableViewCell.swift */; };
 		4B4EE7D9274067EA00547272 /* GameDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EE7D8274067EA00547272 /* GameDetailedController.swift */; };
@@ -29,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4B4EE7D227405EF300547272 /* GamesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesModel.swift; sourceTree = "<group>"; };
+		4B4EE7D227405EF300547272 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 		4B4EE7D427405F3B00547272 /* GamesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesController.swift; sourceTree = "<group>"; };
 		4B4EE7D62740677700547272 /* GamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewCell.swift; sourceTree = "<group>"; };
 		4B4EE7D8274067EA00547272 /* GameDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailedController.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		C20E2AFA273E54FD009A194D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4B4EE7D227405EF300547272 /* GamesModel.swift */,
+				4B4EE7D227405EF300547272 /* Games.swift */,
 				C23ADB5E273FEE7D0090A6C3 /* Team.swift */,
 				C23D27442740E21800FD864A /* Developer.swift */,
 			);
@@ -224,7 +224,7 @@
 				C20E2B04273E6753009A194D /* DataManager.swift in Sources */,
 				4B4EE7D9274067EA00547272 /* GameDetailedController.swift in Sources */,
 				4B4EE7D72740677700547272 /* GamesTableViewCell.swift in Sources */,
-				4B4EE7D327405EF300547272 /* GamesModel.swift in Sources */,
+				4B4EE7D327405EF300547272 /* Games.swift in Sources */,
 				C20E2AE7273E54A8009A194D /* AppDelegate.swift in Sources */,
 				4B4EE7D527405F3B00547272 /* GamesController.swift in Sources */,
 				C2A986432740CE7800DDBC43 /* DevelopersController.swift in Sources */,

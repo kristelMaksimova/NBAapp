@@ -9,14 +9,13 @@ import UIKit
 
 class GamesTableViewCell: UITableViewCell {
     
-    //MARK: - IBOutlets
+    //MARK: - Outlets
     @IBOutlet weak var teamOneLabel: UILabel!
     @IBOutlet weak var teamTwoLabel: UILabel!
     @IBOutlet weak var teamOneImage: UIImageView!
     @IBOutlet weak var teamTwoImage: UIImageView!
     @IBOutlet weak var totalScore: UILabel!
     
-    //MARK: - Methods
     func configure(with game: Game) {
         teamOneLabel.text = game.attackers
         teamTwoLabel.text = game.defenders

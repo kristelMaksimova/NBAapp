@@ -8,6 +8,8 @@
 import Foundation
 
 class DataManager {
+    
+    //MARK: - Public properties
     static let shared = DataManager()
     
     //MARK: - News
@@ -401,6 +403,7 @@ class DataManager {
         "Jazz": ["Chris Smith", "Cade Cunningham", "Frank Jackson", "Hamidou Diallo", "Killian Hayes", "Trey Lyles", "Jerami Grant", "Isaiah Livers", "Kelly Olynyk", "Rodney McGruder"]
     ]
     
+    //MARK: - Developers
     let developers: [[String: String]] = [
         ["id": "0",
          "first name": "Stanislav",
