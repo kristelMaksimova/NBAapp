@@ -14,11 +14,11 @@ App's tree of controllers is:
     - Developers controller
         - Member detailed controller
 
-### Teams controller
+### Teams
 Presents teams of legue list.
-By tapping to cell there is transition to current team detailed view with additional info, like profile and lineup.
+By tapping to cell there is transition to current team detailed view with additional info, like profile and lineup. There is ability to mark team as favourite by tapping the start at detailed view, and you will see it at the list view.
 
-### Games controller
+### Games
 Presents results of games list.
 By tapping to cell there is transition to current game detailed view with additional info, like game summary and player of the game.
 
