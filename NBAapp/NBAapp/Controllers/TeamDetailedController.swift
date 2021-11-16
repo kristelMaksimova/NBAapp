@@ -38,12 +38,9 @@ class TeamDetailedController: UIViewController {
         case 0:
             profileView.isHidden = false
             lineupTableView.isHidden = true
-        case 1:
-            profileView.isHidden = true
-            lineupTableView.isHidden = false
         default:
             profileView.isHidden = true
-            lineupTableView.isHidden = true
+            lineupTableView.isHidden = false
         }
     }
     
@@ -73,7 +70,8 @@ extension TeamDetailedController:  UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "lineupCell", for: indexPath)
         
         var content = cell.defaultContentConfiguration()
-        content.text = team.lineup[indexPath.row]
+        let player = team.lineup[indexPath.row]
+        content.text = player
         
         cell.contentConfiguration = content
         

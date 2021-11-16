@@ -84,6 +84,7 @@
                             <constraint firstItem="BF2-E9-2gp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="pup-oN-GhH"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="News" image="newspaper" catalog="system" id="GKP-ri-Beh"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -176,6 +177,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

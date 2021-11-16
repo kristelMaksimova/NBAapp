@@ -24,6 +24,7 @@ class GamesController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.title = "Games"
+        tabBarController?.tabBarItem.image = UIImage.init(systemName: "sportscourt")
     }
 }
 

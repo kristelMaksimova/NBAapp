@@ -231,11 +231,10 @@
                                 </constraints>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OZo-T1-lWL">
-                                <rect key="frame" x="116" y="369" width="182" height="32"/>
+                                <rect key="frame" x="146.5" y="369" width="121" height="32"/>
                                 <segments>
                                     <segment title="Profile"/>
                                     <segment title="Lineup"/>
-                                    <segment title="News"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentControlChanged" destination="cBU-ta-aCT" eventType="valueChanged" id="WS4-i7-xNc"/>
@@ -295,6 +294,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FI8-le-D88" secondAttribute="trailing" constant="20" symbolic="YES" id="0Wi-Ch-qzF"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AF5-bh-XUl" secondAttribute="trailing" constant="20" symbolic="YES" id="1vI-tz-742"/>
                                     <constraint firstItem="AF5-bh-XUl" firstAttribute="centerY" secondItem="0U4-8a-2cd" secondAttribute="centerY" id="28A-8d-q5k"/>
                                     <constraint firstItem="4U2-l4-Hgc" firstAttribute="leading" secondItem="MjE-VG-a0K" secondAttribute="trailing" constant="10" id="4Af-ea-TGc"/>
                                     <constraint firstItem="FI8-le-D88" firstAttribute="centerY" secondItem="0Bu-vq-lws" secondAttribute="centerY" id="60N-8D-rot"/>
@@ -308,9 +309,11 @@
                                     <constraint firstItem="CMx-Hk-cX2" firstAttribute="leading" secondItem="0U4-8a-2cd" secondAttribute="leading" id="Xpi-nv-uLE"/>
                                     <constraint firstItem="0U4-8a-2cd" firstAttribute="top" secondItem="SM1-xI-Eea" secondAttribute="top" constant="8" id="b10-oi-KKy"/>
                                     <constraint firstItem="FI8-le-D88" firstAttribute="leading" secondItem="0Bu-vq-lws" secondAttribute="trailing" constant="10" id="cvX-d2-NHL"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EFQ-bQ-Tpc" secondAttribute="trailing" constant="20" symbolic="YES" id="gap-FV-5jA"/>
                                     <constraint firstItem="0Bu-vq-lws" firstAttribute="leading" secondItem="0U4-8a-2cd" secondAttribute="leading" id="iQZ-Dn-DOj"/>
                                     <constraint firstItem="EFQ-bQ-Tpc" firstAttribute="leading" secondItem="CMx-Hk-cX2" secondAttribute="trailing" constant="10" id="mSn-2h-m5b"/>
                                     <constraint firstItem="CMx-Hk-cX2" firstAttribute="top" secondItem="0Bu-vq-lws" secondAttribute="bottom" constant="8" symbolic="YES" id="mlK-Wb-vjf"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4U2-l4-Hgc" secondAttribute="trailing" constant="20" symbolic="YES" id="mpq-bD-J1n"/>
                                     <constraint firstAttribute="bottom" secondItem="CMx-Hk-cX2" secondAttribute="bottom" constant="12" id="vcL-f5-dTg"/>
                                 </constraints>
                             </view>
