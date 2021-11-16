@@ -11,16 +11,18 @@ class DevelopersController: UIViewController {
     
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
-    
+
     //MARK: - Private properties
     private let developers = Developer.getDevelopers()
     
+    //MARK: - Override
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.title = "Developers"
     }
 }
 
+//MARK: - Extension
 extension DevelopersController: UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - Table view data source

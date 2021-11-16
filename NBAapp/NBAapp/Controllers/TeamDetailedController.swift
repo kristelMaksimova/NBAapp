@@ -22,17 +22,16 @@ class TeamDetailedController: UIViewController {
     //MARK: - Public properties
     var team: Team!
     
+    //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.title = team.teamNameFull
         
         setImages()
         setLabels()
     }
-}
 
-extension TeamDetailedController: UITableViewDataSource, UITableViewDelegate {
-    
     //MARK: - Actions
     @IBAction func segmentControlChanged() {
         switch segmentControl.selectedSegmentIndex{
@@ -48,21 +47,6 @@ extension TeamDetailedController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    //MARK: - TableView data source
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        team.lineup.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "lineupCell", for: indexPath)
-        var content = cell.defaultContentConfiguration()
-        
-        content.text = team.lineup[indexPath.row]
-        cell.contentConfiguration = content
-        
-        return cell
-    }
-    
     //MARK: - Private methods
     private func setImages() {
         teamLogoImageView.image = UIImage(named: team.logoImage)
@@ -73,5 +57,26 @@ extension TeamDetailedController: UITableViewDataSource, UITableViewDelegate {
         cityLabel.text = team.city
         arenaLabel.text = team.arena
         headCoachLabel.text = team.headCoach
+    }
+    
+}
+
+//MARK: - Extension
+extension TeamDetailedController:  UITableViewDataSource, UITableViewDelegate {
+    
+    //MARK: - TableView data source
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        team.lineup.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "lineupCell", for: indexPath)
+        
+        var content = cell.defaultContentConfiguration()
+        content.text = team.lineup[indexPath.row]
+        
+        cell.contentConfiguration = content
+        
+        return cell
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class DeveloperDetailedController: UIViewController {
-    
+
     //MARK: - Outlets
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var rolesLabel: UILabel!
@@ -19,6 +19,7 @@ class DeveloperDetailedController: UIViewController {
     //MARK: - Public properties
     var developer: Developer!
     
+    //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = developer.fullName
