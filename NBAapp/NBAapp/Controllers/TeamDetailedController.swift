@@ -9,7 +9,7 @@ import UIKit
 
 class TeamDetailedController: UIViewController {
     
-    //MARK: - IBOutlets
+    //MARK: - Outlets
     @IBOutlet weak var teamLogoImageView: UIImageView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var profileView: UIView!
@@ -33,7 +33,7 @@ class TeamDetailedController: UIViewController {
 
 extension TeamDetailedController: UITableViewDataSource, UITableViewDelegate {
     
-    //MARK: - IBActions
+    //MARK: - Actions
     @IBAction func segmentControlChanged() {
         switch segmentControl.selectedSegmentIndex{
         case 0:

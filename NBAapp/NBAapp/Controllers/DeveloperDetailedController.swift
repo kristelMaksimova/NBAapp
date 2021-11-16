@@ -9,7 +9,7 @@ import UIKit
 
 class DeveloperDetailedController: UIViewController {
     
-    //MARK: - IBOutlets
+    //MARK: - Outlets
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var rolesLabel: UILabel!
     @IBOutlet weak var responsibilityLabel: UILabel!

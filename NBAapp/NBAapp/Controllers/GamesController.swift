@@ -9,7 +9,7 @@ import UIKit
 
 class GamesController: UIViewController {
     
-    //MARK: - IBOutlets
+    //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - Public properties

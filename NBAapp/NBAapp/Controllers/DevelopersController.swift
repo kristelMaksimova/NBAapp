@@ -9,7 +9,7 @@ import UIKit
 
 class DevelopersController: UIViewController {
     
-    //MARK: - IBOutlets
+    //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - Private properties

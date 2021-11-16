@@ -9,7 +9,7 @@ import UIKit
 
 class TeamsController: UIViewController {
     
-    //MARK: - IBOutlets
+    //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - Public properties

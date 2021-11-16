@@ -9,7 +9,7 @@ import UIKit
 
 class GameDetailedController: UIViewController {
     
-    //MARK: - IBOutlets
+    //MARK: - Outlets
     @IBOutlet weak var arenaImageView: UIImageView!
     @IBOutlet weak var attackTeamLogo: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!

@@ -9,7 +9,7 @@ import UIKit
 
 class TeamsTableViewCell: UITableViewCell {
     
-    //MARK: - IBOutlets
+    //MARK: - Outlets
     @IBOutlet weak var teamLogoImageView: UIImageView!
     @IBOutlet weak var teamNameLabel: UILabel!
     
