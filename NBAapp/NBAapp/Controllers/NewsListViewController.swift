@@ -21,7 +21,7 @@ class NewsListViewController: UIViewController {
     }
 }
     
-//MARK: - Extension
+// MARK: - Extention
 extension NewsListViewController: UITableViewDataSource, UITableViewDelegate {
         
     // MARK: - Table view data source
