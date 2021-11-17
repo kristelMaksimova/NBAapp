@@ -7,14 +7,19 @@
 
 import UIKit
 
+protocol GamesControllerDelegate {
+    func updateModel(with: Game, byIndex: Int)
+}
+
 class GamesController: UIViewController {
     
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - Public properties
-    let games = Game.getGames().shuffled()
+    var games = Game.getGames().shuffled()
     
+    //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -57,7 +62,17 @@ extension GamesController: UITableViewDelegate, UITableViewDataSource {
         
         let model = games[indexPath.row]
         gameDetailedlVC.game = model
+        gameDetailedlVC.currentIndex = indexPath.row
+        gameDetailedlVC.delegate = self
         
         tableView.deselectRow(at: indexPath, animated: false)
+    }
+}
+
+extension GamesController: GamesControllerDelegate {
+    func updateModel(with game: Game, byIndex index: Int) {
+        games[index].attackIsFavorite = game.attackIsFavorite
+        games[index].deffIsFavorite = game.deffIsFavorite
+        tableView.reloadData()
     }
 }

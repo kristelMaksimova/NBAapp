@@ -10,6 +10,8 @@ import UIKit
 class GameDetailedController: UIViewController {
     
     //MARK: - Outlets
+    @IBOutlet weak var favoriteAttackTeam: UIButton!
+    @IBOutlet weak var favoriteDeffTeam: UIButton!
     @IBOutlet weak var arenaImageView: UIImageView!
     @IBOutlet weak var attackTeamLogo: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
@@ -25,19 +27,61 @@ class GameDetailedController: UIViewController {
     
     //MARK: - Public properties
     var game: Game!
+    var currentIndex: Int!
+    var delegate: GamesController!
     
+    //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "\(game.attackers) vs. \(game.defenders)"
         
         setImages()
         setLabels()
+        toggle(favoriteAttackTeam)
+        toggle(favoriteDeffTeam)
+    }
+    
+    //MARK: - Actions
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            if game.attackIsFavorite {
+                game.attackIsFavorite = false
+            } else {
+                game.attackIsFavorite = true
+            }
+            toggle(favoriteAttackTeam)
+            delegate.updateModel(with: game, byIndex: currentIndex)
+            
+        default:
+            if game.deffIsFavorite {
+                game.deffIsFavorite = false
+            } else {
+                game.deffIsFavorite = true
+            }
+            toggle(favoriteDeffTeam)
+            delegate.updateModel(with: game, byIndex: currentIndex)
+        }
     }
 }
 
+//MARK: - Extension
 extension GameDetailedController {
     
     //MARK: - Private methods
+    private func toggle(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected // <- проблема скорее всего тут
+
+        switch sender.tag {
+        case 0:
+            sender.setImage(UIImage(systemName: "star"), for: .selected)
+            sender.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        default:
+            sender.setImage(UIImage(systemName: "star"), for: .selected)
+            sender.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        }
+    }
+    
     private func setImages() {
         arenaImageView.image = UIImage(named: game.arenaPhoto)
         attackTeamLogo.image = UIImage(named: game.logoAttack)

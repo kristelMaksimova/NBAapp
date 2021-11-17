@@ -10,6 +10,8 @@ import UIKit
 class GamesTableViewCell: UITableViewCell {
     
     //MARK: - Outlets
+    @IBOutlet weak var attackFavorite: UIImageView!
+    @IBOutlet weak var deffFavorite: UIImageView!
     @IBOutlet weak var teamOneLabel: UILabel!
     @IBOutlet weak var teamTwoLabel: UILabel!
     @IBOutlet weak var teamOneImage: UIImageView!
@@ -22,5 +24,17 @@ class GamesTableViewCell: UITableViewCell {
         teamOneImage.image = UIImage(named: game.logoAttack)
         teamTwoImage.image = UIImage(named: game.logoDeff)
         totalScore.text = game.score
+        
+        if game.attackIsFavorite {
+            attackFavorite.isHidden = false
+        } else {
+            attackFavorite.isHidden = true
+        }
+        
+        if game.deffIsFavorite {
+            deffFavorite.isHidden = false
+        } else {
+            deffFavorite.isHidden = true
+        }
     }
 }

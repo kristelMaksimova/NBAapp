@@ -21,6 +21,8 @@ struct Game {
     let logoAttack: String
     let logoDeff: String
     let date: String
+    var attackIsFavorite = false
+    var deffIsFavorite = false
     
     static func getGames() -> [Game] {
         var arrayOfGames: [Game] = []
