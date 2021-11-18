@@ -7,10 +7,16 @@
 
 import UIKit
 
+// MARK: - Protocol
+protocol NewsDetailedDelegate {
+    func updateModel(with: News, forIndex: Int)
+}
+
 class NewsListViewController: UIViewController {
     
     //MARK: - Outlets
-    @IBOutlet var table: UITableView!
+
+    @IBOutlet var tableView: UITableView!
     
     //MARK: - Public properties
     var newsList = News.getNews()
@@ -21,7 +27,7 @@ class NewsListViewController: UIViewController {
     }
 }
     
-// MARK: - Extention
+// MARK: - Extension
 extension NewsListViewController: UITableViewDataSource, UITableViewDelegate {
         
     // MARK: - Table view data source
@@ -43,9 +49,18 @@ extension NewsListViewController: UITableViewDataSource, UITableViewDelegate {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let fullNewsVC = segue.destination as? NewsDetailedController else {return}
-        guard let indexPath = table.indexPathForSelectedRow else {return}
+        guard let indexPath = tableView.indexPathForSelectedRow else {return}
         let news = newsList[indexPath.row]
         fullNewsVC.news = news
+        fullNewsVC.delegate = self
+        fullNewsVC.rowIndex = indexPath.row
     }
 }
 
+// MARK: Extension Delegate
+extension NewsListViewController: NewsDetailedDelegate {
+    func updateModel(with news: News, forIndex index: Int) {
+        newsList[index] = news
+        tableView.reloadData()
+    }
+}

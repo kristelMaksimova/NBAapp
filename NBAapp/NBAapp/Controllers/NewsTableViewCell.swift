@@ -14,10 +14,17 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet var titleNews: UILabel!
     @IBOutlet var subtitleNews: UILabel!
     
+    // MARK: - Pablic methods
     func configure(with news: News) {
         titleNews.text = news.title
         imageNews.image = UIImage(named: news.image)
         textLimitation(with: news)
+        
+        if news.isRead {
+            imageNews.alpha = 0.8
+            titleNews.textColor = .gray
+            subtitleNews.textColor = .gray
+        }
     }
     
     //MARK: - Private methods

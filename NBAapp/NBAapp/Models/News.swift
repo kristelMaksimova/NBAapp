@@ -13,6 +13,7 @@ struct News {
     let source: String
     let date: String
     let image: String
+    var isRead = false
 }
 
 extension News {
