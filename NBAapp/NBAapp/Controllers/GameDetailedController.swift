@@ -46,7 +46,6 @@ class GameDetailedController: UIViewController {
         } else {
             game.attackers.isFavourite = true
         }
-        
         setButtons()
         delegate.updateAttack(with: game)
     }
@@ -57,7 +56,6 @@ class GameDetailedController: UIViewController {
         } else {
             game.defenders.isFavourite = true
         }
-        
         setButtons()
         delegate.updateDeff(with: game)
     }

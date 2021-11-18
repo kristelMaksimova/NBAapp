@@ -10,7 +10,6 @@ import UIKit
 protocol GamesControllerDelegate {
     func updateAttack(with: Game)
     func updateDeff(with: Game)
-    
 }
 
 class GamesController: UIViewController {
@@ -31,7 +30,6 @@ class GamesController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.title = "Games"
-        //        tabBarController?.tabBarItem.image = UIImage.init(systemName: "sportscourt")
     }
 }
 
@@ -72,6 +70,8 @@ extension GamesController: UITableViewDelegate, UITableViewDataSource {
 
 //MARK: - Extension Delegate
 extension GamesController: GamesControllerDelegate {
+    
+    //MARK: - Methods
     func updateAttack(with game: Game) {
         var resultGames: [Game] = []
         
@@ -88,7 +88,6 @@ extension GamesController: GamesControllerDelegate {
             } else if game.attackers.teamName == newDefenders.teamName {
                 game.attackers.isFavourite = newDefenders.isFavourite
             }
-            
             resultGames.append(game)
             
             games = resultGames
@@ -112,7 +111,6 @@ extension GamesController: GamesControllerDelegate {
             } else if game.attackers.teamName == newAttackers.teamName {
                 game.attackers.isFavourite = newAttackers.isFavourite
             }
-            
             resultGames.append(game)
             
             games = resultGames

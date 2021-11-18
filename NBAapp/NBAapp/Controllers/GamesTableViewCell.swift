@@ -30,6 +30,7 @@ class GamesTableViewCell: UITableViewCell {
         } else {
             attackFavorite.isHidden = true
         }
+        
         if game.defenders.isFavourite {
             deffFavorite.isHidden = false
         } else {
