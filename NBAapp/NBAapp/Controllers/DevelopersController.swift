@@ -11,7 +11,7 @@ class DevelopersController: UIViewController {
     
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
-
+    
     //MARK: - Private properties
     private let developers = Developer.getDevelopers()
     
@@ -37,8 +37,12 @@ extension DevelopersController: UITableViewDataSource, UITableViewDelegate {
         
         content.image = UIImage(named: developer.photo)
         content.imageProperties.cornerRadius = cell.frame.height / 2
+        
         content.text = developer.fullName
+        content.textProperties.font = UIFont.boldSystemFont(ofSize: 20)
+        
         content.secondaryText = developer.roles.joined(separator: ", ")
+        content.secondaryTextProperties.font = UIFont.systemFont(ofSize: 16)
         
         cell.contentConfiguration = content
         

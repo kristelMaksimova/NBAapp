@@ -13,20 +13,18 @@ struct Game {
     let city: String
     let arena: String
     let arenaPhoto: String
-    let attackers: String
-    let defenders: String
+    var attackers: Team
+    var defenders: Team
     let topPlayer: String
     let topPlayerPhoto: String
     let winner: String
-    let logoAttack: String
-    let logoDeff: String
     let date: String
     
     static func getGames() -> [Game] {
         var arrayOfGames: [Game] = []
         let dataManager = DataManager.shared
         let games = dataManager.games
-        let teams = dataManager.teams
+        let teams = Team.getTeams()
         
         for game in games {
             let id = Int(game["id"] ?? "") ?? 0
@@ -34,37 +32,32 @@ struct Game {
             let city = game["City"] ?? ""
             let arena = game["Arena"] ?? ""
             let arenaPhoto = game["ArenaPhoto"] ?? ""
-            let attackers = game["Attackers"] ?? ""
-            let defenders = game["Defenders"] ?? ""
+            let attackers = teams.first {
+                $0.teamName == game["Attackers"]
+            }
+            let defenders = teams.first {
+                $0.teamName == game["Defenders"]
+            }
+            
+            guard let attackersTeam = attackers else { return [] }
+            guard let deffendersTeam = defenders else { return [] }
+                    
+                    
             let topPlayer = game["TopPlayer"] ?? ""
             let topPlayerPhoto = game["TopPlayerPhoto"] ?? ""
             let winner = game["Winner"] ?? ""
             let date = game["Date"] ?? ""
-            var logoAttack = ""
-            var logoDeff = ""
-            
-            for team in teams {
-                let currentTeam = team["teamName"] ?? ""
-                
-                if currentTeam == attackers {
-                    logoAttack = team["logoImage"] ?? ""
-                } else if currentTeam == defenders {
-                    logoDeff = team["logoImage"] ?? ""
-                }
-            }
             
             let game = Game(id: id,
                             score: score,
                             city: city,
                             arena: arena,
                             arenaPhoto: arenaPhoto,
-                            attackers: attackers,
-                            defenders: defenders,
+                            attackers: attackersTeam,
+                            defenders: deffendersTeam,
                             topPlayer: topPlayer,
                             topPlayerPhoto: topPlayerPhoto,
                             winner: winner,
-                            logoAttack: logoAttack,
-                            logoDeff: logoDeff,
                             date: date)
             arrayOfGames.append(game)
         }

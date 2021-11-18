@@ -39,14 +39,13 @@ extension DeveloperDetailedController {
     }
     
     private func setLabels() {
-        let rolesString = "Role:\n" + developer.roles.joined(separator: ", ")
+        let rolesString = developer.roles.joined(separator: ", ")
         rolesLabel.text = rolesString
         
-        let responsibilityString = "Responsibility:\n" + developer.responsibility.joined(separator: ", ")
+        let responsibilityString = developer.responsibility.joined(separator: ", ")
         responsibilityLabel.text = responsibilityString
         
-        telegramLabel.text = "Telegram:\n" + developer.telegram
-        githubLabel.text = "GitHub:\n" + developer.github
-        
+        telegramLabel.text = developer.telegram
+        githubLabel.text = developer.github
     }
 }
