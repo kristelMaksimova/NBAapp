@@ -281,7 +281,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="5vc-hx-lVC" eventType="touchUpInside" id="lYv-Gq-XZv"/>
+                                    <action selector="defendersButtonPressed:" destination="5vc-hx-lVC" eventType="touchUpInside" id="4eS-za-Fum"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfA-3e-DUy">
@@ -294,7 +294,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="5vc-hx-lVC" eventType="touchUpInside" id="9CL-kA-hcg"/>
+                                    <action selector="attackersButtonPressed:" destination="5vc-hx-lVC" eventType="touchUpInside" id="ULm-v9-FRe"/>
                                 </connections>
                             </button>
                         </subviews>

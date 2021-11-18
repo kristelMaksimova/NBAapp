@@ -27,41 +27,39 @@ class GameDetailedController: UIViewController {
     
     //MARK: - Public properties
     var game: Game!
-    var currentIndex: Int!
     var delegate: GamesController!
     
     //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "\(game.attackers) vs. \(game.defenders)"
+        navigationItem.title = "\(game.attackers.teamName) vs. \(game.defenders.teamName)"
         
         setImages()
         setLabels()
-        toggle(favoriteAttackTeam)
-        toggle(favoriteDeffTeam)
+        setButtons()
     }
     
     //MARK: - Actions
-    @IBAction func buttonPressed(_ sender: UIButton) {
-        switch sender.tag {
-        case 0:
-            if game.attackIsFavorite {
-                game.attackIsFavorite = false
-            } else {
-                game.attackIsFavorite = true
-            }
-            toggle(favoriteAttackTeam)
-            delegate.updateModel(with: game, byIndex: currentIndex)
-            
-        default:
-            if game.deffIsFavorite {
-                game.deffIsFavorite = false
-            } else {
-                game.deffIsFavorite = true
-            }
-            toggle(favoriteDeffTeam)
-            delegate.updateModel(with: game, byIndex: currentIndex)
+    @IBAction func attackersButtonPressed(_ sender: Any) {
+        if game.attackers.isFavourite {
+            game.attackers.isFavourite = false
+        } else {
+            game.attackers.isFavourite = true
         }
+        
+        setButtons()
+        delegate.updateAttack(with: game)
+    }
+    
+    @IBAction func defendersButtonPressed(_ sender: Any) {
+        if game.defenders.isFavourite {
+            game.defenders.isFavourite = false
+        } else {
+            game.defenders.isFavourite = true
+        }
+        
+        setButtons()
+        delegate.updateDeff(with: game)
     }
 }
 
@@ -69,32 +67,33 @@ class GameDetailedController: UIViewController {
 extension GameDetailedController {
     
     //MARK: - Private methods
-    private func toggle(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected // <- проблема скорее всего тут
-
-        switch sender.tag {
-        case 0:
-            sender.setImage(UIImage(systemName: "star"), for: .selected)
-            sender.setImage(UIImage(systemName: "star.fill"), for: .normal)
-        default:
-            sender.setImage(UIImage(systemName: "star"), for: .selected)
-            sender.setImage(UIImage(systemName: "star.fill"), for: .normal)
+    private func setButtons() {
+        if game.attackers.isFavourite {
+            favoriteAttackTeam.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        } else {
+            favoriteAttackTeam.setImage(UIImage(systemName: "star"), for: .normal)
+        }
+        
+        if game.defenders.isFavourite {
+            favoriteDeffTeam.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        } else {
+            favoriteDeffTeam.setImage(UIImage(systemName: "star"), for: .normal)
         }
     }
     
     private func setImages() {
         arenaImageView.image = UIImage(named: game.arenaPhoto)
-        attackTeamLogo.image = UIImage(named: game.logoAttack)
-        deffTeamLogo.image = UIImage(named: game.logoDeff)
+        attackTeamLogo.image = UIImage(named: game.attackers.logoImage)
+        deffTeamLogo.image = UIImage(named: game.defenders.logoImage)
         topPlayerPhoto.image = UIImage(named: game.topPlayerPhoto)
         topPlayerPhoto.layer.cornerRadius = topPlayerPhoto.frame.width / 2
     }
     
     private func setLabels() {
-        arenaLabel.text = game.arena
+        arenaLabel.text = game.defenders.arena
         dateLabel.text = game.date
-        attackTeamLabel.text = game.attackers
-        deffTeamLabel.text = game.defenders
+        attackTeamLabel.text = game.attackers.teamNameFull
+        deffTeamLabel.text = game.defenders.teamNameFull
         gameScore.text = game.score
         cityLabel.text = game.city
         winnerLabel.text = game.winner

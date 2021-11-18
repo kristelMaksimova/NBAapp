@@ -19,19 +19,18 @@ class GamesTableViewCell: UITableViewCell {
     @IBOutlet weak var totalScore: UILabel!
     
     func configure(with game: Game) {
-        teamOneLabel.text = game.attackers
-        teamTwoLabel.text = game.defenders
-        teamOneImage.image = UIImage(named: game.logoAttack)
-        teamTwoImage.image = UIImage(named: game.logoDeff)
+        teamOneLabel.text = game.attackers.teamName
+        teamTwoLabel.text = game.defenders.teamName
+        teamOneImage.image = UIImage(named: game.attackers.logoImage)
+        teamTwoImage.image = UIImage(named: game.defenders.logoImage)
         totalScore.text = game.score
         
-        if game.attackIsFavorite {
+        if game.attackers.isFavourite {
             attackFavorite.isHidden = false
         } else {
             attackFavorite.isHidden = true
         }
-        
-        if game.deffIsFavorite {
+        if game.defenders.isFavourite {
             deffFavorite.isHidden = false
         } else {
             deffFavorite.isHidden = true

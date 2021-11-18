@@ -8,7 +8,9 @@
 import UIKit
 
 protocol GamesControllerDelegate {
-    func updateModel(with: Game, byIndex: Int)
+    func updateAttack(with: Game)
+    func updateDeff(with: Game)
+    
 }
 
 class GamesController: UIViewController {
@@ -29,11 +31,11 @@ class GamesController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.title = "Games"
-        tabBarController?.tabBarItem.image = UIImage.init(systemName: "sportscourt")
+        //        tabBarController?.tabBarItem.image = UIImage.init(systemName: "sportscourt")
     }
 }
 
-//MARK: - Extension
+//MARK: - Extension TableView
 extension GamesController: UITableViewDelegate, UITableViewDataSource {
     
     //MARK: - TableView data source
@@ -62,17 +64,59 @@ extension GamesController: UITableViewDelegate, UITableViewDataSource {
         
         let model = games[indexPath.row]
         gameDetailedlVC.game = model
-        gameDetailedlVC.currentIndex = indexPath.row
         gameDetailedlVC.delegate = self
         
         tableView.deselectRow(at: indexPath, animated: false)
     }
 }
 
+//MARK: - Extension Delegate
 extension GamesController: GamesControllerDelegate {
-    func updateModel(with game: Game, byIndex index: Int) {
-        games[index].attackIsFavorite = game.attackIsFavorite
-        games[index].deffIsFavorite = game.deffIsFavorite
-        tableView.reloadData()
+    func updateAttack(with game: Game) {
+        var resultGames: [Game] = []
+        
+        let newAttackers = game.attackers
+        let newDefenders = game.defenders
+        
+        for var game in games {
+            if game.attackers.teamName == newAttackers.teamName {
+                game.attackers.isFavourite = newAttackers.isFavourite
+            } else if game.defenders.teamName == newAttackers.teamName {
+                game.defenders.isFavourite = newAttackers.isFavourite
+            } else if game.defenders.teamName == newDefenders.teamName {
+                game.defenders.isFavourite = newDefenders.isFavourite
+            } else if game.attackers.teamName == newDefenders.teamName {
+                game.attackers.isFavourite = newDefenders.isFavourite
+            }
+            
+            resultGames.append(game)
+            
+            games = resultGames
+            tableView.reloadData()
+        }
+    }
+    
+    func updateDeff(with game: Game) {
+        var resultGames: [Game] = []
+        
+        let newAttackers = game.attackers
+        let newDefenders = game.defenders
+        
+        for var game in games {
+            if game.defenders.teamName == newDefenders.teamName {
+                game.defenders.isFavourite = newDefenders.isFavourite
+            } else if game.defenders.teamName == newAttackers.teamName {
+                game.defenders.isFavourite = newAttackers.isFavourite
+            } else if game.attackers.teamName == newDefenders.teamName {
+                game.attackers.isFavourite = newDefenders.isFavourite
+            } else if game.attackers.teamName == newAttackers.teamName {
+                game.attackers.isFavourite = newAttackers.isFavourite
+            }
+            
+            resultGames.append(game)
+            
+            games = resultGames
+            tableView.reloadData()
+        }
     }
 }
