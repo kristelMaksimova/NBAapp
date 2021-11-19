@@ -28,14 +28,13 @@ class TeamDetailedController: UIViewController {
     //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationItem.title = team.teamNameFull
         
         setButtons()
         setImages()
         setLabels()
     }
-
+    
     //MARK: - Actions
     @IBAction func segmentControlChanged() {
         switch segmentControl.selectedSegmentIndex{

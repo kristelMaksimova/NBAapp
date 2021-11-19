@@ -8,19 +8,18 @@
 import UIKit
 
 class NewsDetailedController: UIViewController {
-
+    
     //MARK: - Outlets
     @IBOutlet var titleFullNews: UILabel!
     @IBOutlet var imageFullNews: UIImageView!
     @IBOutlet var subtitleFullNews: UILabel!
     @IBOutlet var dateFullNews: UILabel!
     @IBOutlet var sourceFullNews: UILabel!
-    @IBOutlet var reedButton: UIBarButtonItem!
     
     //MARK: - Public properties
     var news: News!
     var rowIndex: Int!
-    var delegate: NewsListViewController!
+    var delegate: NewsController!
     
     //MARK: - Override
     override func viewDidLoad() {
@@ -35,7 +34,7 @@ class NewsDetailedController: UIViewController {
         delegate.updateModel(with: news, forIndex: rowIndex)
     }
 }
-    
+
 //MARK: - Extension
 extension NewsDetailedController {
     

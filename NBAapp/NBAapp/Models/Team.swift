@@ -21,7 +21,9 @@ struct Team {
     var teamNameFull: String {
         "\(city) \(teamName)"
     }
-    
+}
+
+extension Team {
     static func getTeams() -> [Team] {
         var result: [Team] = []
         let dataManager = DataManager.shared

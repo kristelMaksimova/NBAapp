@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Protocol
 protocol GamesControllerDelegate {
     func updateAttack(with: Game)
     func updateDeff(with: Game)

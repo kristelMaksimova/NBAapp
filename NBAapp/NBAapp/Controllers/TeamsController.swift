@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Protocol
 protocol TeamDetailedDelegate {
     func updateModel(with: Team, byIndex: Int)
 }
@@ -19,6 +20,7 @@ class TeamsController: UIViewController {
     //MARK: - Public properties
     var teams = Team.getTeams()
     
+    //MARK: - Override
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.title = "Teams"
@@ -61,6 +63,7 @@ extension TeamsController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+//MARK: - Extension Delegate
 extension TeamsController: TeamDetailedDelegate {
     func updateModel(with team: Team, byIndex index: Int) {
         teams[index].isFavourite = team.isFavourite

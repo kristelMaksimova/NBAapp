@@ -20,7 +20,9 @@ struct Developer {
     var fullName: String {
         "\(firstName) \(lastName)"
     }
-    
+}
+
+extension Developer {
     static func getDevelopers() -> [Developer] {
         var result: [Developer] = []
         let dataManager = DataManager.shared

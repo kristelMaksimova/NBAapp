@@ -276,7 +276,7 @@ class DataManager {
     ]
     
     //MARK: - Teams
-    let teams: [[String: String]] = [
+    let teams: [[String : String]] = [
         ["id": "1",
          "teamName": "Celtics",
          "Founded": "1946",
@@ -386,25 +386,25 @@ class DataManager {
     
     //MARK: - Lineups
     let teamsLineUps: [String: [String]] = [
-        "Celtics": ["Jayson Tatum","Jaylen Brown","Josh Richardson","Romeo Langford","Payton Pritchard","Grant Williams","Enes Kanter","Jabari Parker","Aaron Nesmith","Bruno Fernando"],
-        "Bulls": ["Coby White","Lonzo Ball","Devon Dotson","Derrick Jones Jr.","Alex Caruso","Troy Brown Jr.","Zach LaVine","Nikola Vucevic","DeMar DeRozan","Ayo Dosunmu"],
+        "Celtics": ["Jayson Tatum", "Jaylen Brown", "Josh Richardson", "Romeo Langford", "Payton Pritchard", "Grant Williams", "Enes Kanter", "Jabari Parker", "Aaron Nesmith", "Bruno Fernando"],
+        "Bulls": ["Coby White", "Lonzo Ball", "Devon Dotson", "Derrick Jones Jr.", "Alex Caruso", "Troy Brown Jr.", "Zach LaVine", "Nikola Vucevic", "DeMar DeRozan", "Ayo Dosunmu"],
         "Hawks": ["Delon Wright", "Jalen Johnson", "Sharife Cooper", "Kevin Huerter", "Skylar Mays", "Lou Williams", "Timothe Luwawu-Cabarrot", "Danilo Gallinari", "Gorgui Dieng", "Trae Young"],
         "Knicks": ["Obi Toppin", "Miles McBride", "Nerlens Noel", "Derrick Rose", "Immanuel Quickley", "Quentin Grimes", "Kemba Walker", "RJ Barrett", "Wayne Selden", "Evan Fournier"],
         "Pistons": ["Chris Smith", "Cade Cunningham", "Frank Jackson", "Hamidou Diallo", "Killian Hayes", "Trey Lyles", "Jerami Grant", "Isaiah Livers", "Kelly Olynyk", "Rodney McGruder"],
-        "76ers": ["Coby White","Lonzo Ball","Devon Dotson","Derrick Jones Jr.","Alex Caruso","Troy Brown Jr.","Zach LaVine","Nikola Vucevic","DeMar DeRozan","Ayo Dosunmu"],
-        "Pacers": ["Jayson Tatum","Jaylen Brown","Josh Richardson","Romeo Langford","Payton Pritchard","Grant Williams","Enes Kanter","Jabari Parker","Aaron Nesmith","Bruno Fernando"],
+        "76ers": ["Coby White", "Lonzo Ball", "Devon Dotson", "Derrick Jones Jr.", "Alex Caruso", "Troy Brown Jr.", "Zach LaVine", "Nikola Vucevic", "DeMar DeRozan", "Ayo Dosunmu"],
+        "Pacers": ["Goga Bitadze", "Oshae Brissett", "Malcolm Brogdon", "Torrey Craig", "Chris Duarte", "Justin Holiday", "Enes Kanter", "Jabari Parker", "Aaron Nesmith", "Bruno Fernando"],
         "Magic": ["Obi Toppin", "Miles McBride", "Nerlens Noel", "Derrick Rose", "Immanuel Quickley", "Quentin Grimes", "Kemba Walker", "RJ Barrett", "Wayne Selden", "Evan Fournier"],
         "Thunder": ["Chris Smith", "Cade Cunningham", "Frank Jackson", "Hamidou Diallo", "Killian Hayes", "Trey Lyles", "Jerami Grant", "Isaiah Livers", "Kelly Olynyk", "Rodney McGruder"],
-        "Lakers": ["Coby White","Lonzo Ball","Devon Dotson","Derrick Jones Jr.","Alex Caruso","Troy Brown Jr.","Zach LaVine","Nikola Vucevic","DeMar DeRozan","Ayo Dosunmu"],
-        "Grizzlies": ["Jayson Tatum","Jaylen Brown","Josh Richardson","Romeo Langford","Payton Pritchard","Grant Williams","Enes Kanter","Jabari Parker","Aaron Nesmith","Bruno Fernando"],
+        "Lakers": ["Coby White", "Lonzo Ball", "Devon Dotson", "Derrick Jones Jr.", "Alex Caruso", "Troy Brown Jr.", "Zach LaVine", "Nikola Vucevic", "DeMar DeRozan", "Ayo Dosunmu"],
+        "Grizzlies": ["Jayson Tatum", "Jaylen Brown", "Josh Richardson", "Romeo Langford", "Payton Pritchard", "Grant Williams", "Enes Kanter", "Jabari Parker", "Aaron Nesmith", "Bruno Fernando"],
         "Trail Blazers": ["Obi Toppin", "Miles McBride", "Nerlens Noel", "Derrick Rose", "Immanuel Quickley", "Quentin Grimes", "Kemba Walker", "RJ Barrett", "Wayne Selden", "Evan Fournier"],
-        "Suns": ["Jayson Tatum","Jaylen Brown","Josh Richardson","Romeo Langford","Payton Pritchard","Grant Williams","Enes Kanter","Jabari Parker","Aaron Nesmith","Bruno Fernando"],
-        "Pelicans": ["Coby White","Lonzo Ball","Devon Dotson","Derrick Jones Jr.","Alex Caruso","Troy Brown Jr.","Zach LaVine","Nikola Vucevic","DeMar DeRozan","Ayo Dosunmu"],
+        "Suns": ["Jayson Tatum", "Jaylen Brown", "Josh Richardson", "Romeo Langford", "Payton Pritchard", "Grant Williams", "Enes Kanter", "Jabari Parker", "Aaron Nesmith", "Bruno Fernando"],
+        "Pelicans": ["Coby White", "Lonzo Ball", "Devon Dotson", "Derrick Jones Jr.", "Alex Caruso", "Troy Brown Jr.", "Zach LaVine", "Nikola Vucevic", "DeMar DeRozan", "Ayo Dosunmu"],
         "Jazz": ["Chris Smith", "Cade Cunningham", "Frank Jackson", "Hamidou Diallo", "Killian Hayes", "Trey Lyles", "Jerami Grant", "Isaiah Livers", "Kelly Olynyk", "Rodney McGruder"]
     ]
     
     //MARK: - Developers
-    let developers: [[String: String]] = [
+    let developers: [[String : String]] = [
         ["id": "0",
          "first name": "Stanislav",
          "last name": "Buinovsky",
@@ -417,7 +417,7 @@ class DataManager {
          "first name": "Ruslan",
          "last name": "Safin",
          "roles": "Developer",
-         "responsibility": "Games scene",
+         "responsibility": "Games and Developers scenes",
          "telegram": "@Flea_Q",
          "github": "https://github.com/r0ger27",
          "photo": "safin"],

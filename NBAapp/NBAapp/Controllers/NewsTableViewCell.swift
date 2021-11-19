@@ -14,7 +14,7 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet var titleNews: UILabel!
     @IBOutlet var subtitleNews: UILabel!
     
-    // MARK: - Pablic methods
+    // MARK: - Public methods
     func configure(with news: News) {
         titleNews.text = news.title
         imageNews.image = UIImage(named: news.image)
@@ -29,7 +29,6 @@ class NewsTableViewCell: UITableViewCell {
     
     //MARK: - Private methods
     private func textLimitation(with news: News) {
-        
         var shortTextNews = news.subtitle
         
         if shortTextNews.count >= 250 {

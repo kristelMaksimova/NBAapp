@@ -8,7 +8,7 @@
 import UIKit
 
 class DeveloperDetailedController: UIViewController {
-
+    
     //MARK: - Outlets
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var rolesLabel: UILabel!
@@ -29,6 +29,7 @@ class DeveloperDetailedController: UIViewController {
     }
 }
 
+//MARK: - Extension
 extension DeveloperDetailedController {
     
     //MARK: - Private methods

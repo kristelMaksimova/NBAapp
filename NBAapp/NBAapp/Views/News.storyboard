@@ -11,7 +11,7 @@
         <!--News-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="newsVC" title="News" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="NewsListViewController" customModule="NBAapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newsVC" title="News" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="NewsController" customModule="NBAapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3VX-gH-xjL">
-                                                    <rect key="frame" x="10" y="103" width="394" height="65"/>
+                                                    <rect key="frame" x="10" y="109" width="394" height="59"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="3VX-gH-xjL" secondAttribute="bottom" constant="10" id="NEv-nX-hK5"/>
                                                 <constraint firstItem="hkr-tf-lVJ" firstAttribute="top" secondItem="ZAl-mm-e2W" secondAttribute="top" constant="10" id="RJs-VX-2JT"/>
                                                 <constraint firstItem="3VX-gH-xjL" firstAttribute="leading" secondItem="ZAl-mm-e2W" secondAttribute="leading" constant="10" id="Vqr-Ln-Qz1"/>
-                                                <constraint firstItem="3VX-gH-xjL" firstAttribute="top" secondItem="87z-1o-mEl" secondAttribute="bottom" constant="4" id="bNl-3x-43O"/>
+                                                <constraint firstItem="3VX-gH-xjL" firstAttribute="top" secondItem="87z-1o-mEl" secondAttribute="bottom" constant="10" id="bNl-3x-43O"/>
                                                 <constraint firstItem="hkr-tf-lVJ" firstAttribute="leading" secondItem="87z-1o-mEl" secondAttribute="trailing" constant="8" symbolic="YES" id="mY5-Tq-Llo"/>
                                                 <constraint firstAttribute="trailing" secondItem="3VX-gH-xjL" secondAttribute="trailing" constant="10" id="oRC-hJ-9wU"/>
                                                 <constraint firstItem="87z-1o-mEl" firstAttribute="leading" secondItem="ZAl-mm-e2W" secondAttribute="leading" constant="10" id="orw-Jn-P93"/>
@@ -63,7 +63,7 @@
                                             <outlet property="imageNews" destination="87z-1o-mEl" id="5aa-kI-qIx"/>
                                             <outlet property="subtitleNews" destination="3VX-gH-xjL" id="Nca-x4-D9N"/>
                                             <outlet property="titleNews" destination="hkr-tf-lVJ" id="AAi-Uo-hcW"/>
-                                            <segue destination="tSW-SM-8gf" kind="show" id="oID-XQ-YHu"/>
+                                            <segue destination="tSW-SM-8gf" kind="show" identifier="" id="oID-XQ-YHu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -92,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+            <point key="canvasLocation" x="39" y="119"/>
         </scene>
         <!--News Detailed Controller-->
         <scene sceneID="FG3-r4-2SB">
@@ -134,7 +134,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="fsT-M3-oP5">
-                                <rect key="frame" x="10" y="323" width="394" height="20.5"/>
+                                <rect key="frame" x="10" y="325.5" width="394" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -156,7 +156,7 @@
                             <constraint firstItem="fsT-M3-oP5" firstAttribute="leading" secondItem="KCU-LZ-7Rt" secondAttribute="leading" constant="10" id="j2C-L7-TKE"/>
                             <constraint firstItem="KCU-LZ-7Rt" firstAttribute="trailing" secondItem="fsT-M3-oP5" secondAttribute="trailing" constant="10" id="jFz-yM-r8Z"/>
                             <constraint firstItem="KCU-LZ-7Rt" firstAttribute="trailing" secondItem="3lY-E3-vaM" secondAttribute="trailing" constant="20" id="mvu-lH-O54"/>
-                            <constraint firstItem="fsT-M3-oP5" firstAttribute="top" secondItem="3lY-E3-vaM" secondAttribute="bottom" constant="7.5" id="qzh-RF-jHY"/>
+                            <constraint firstItem="fsT-M3-oP5" firstAttribute="top" secondItem="3lY-E3-vaM" secondAttribute="bottom" constant="10" id="qzh-RF-jHY"/>
                             <constraint firstItem="ZYB-ff-dqH" firstAttribute="leading" secondItem="KCU-LZ-7Rt" secondAttribute="leading" constant="20" id="zEA-kf-KKE"/>
                         </constraints>
                     </view>

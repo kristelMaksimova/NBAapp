@@ -19,7 +19,9 @@ struct Game {
     let topPlayerPhoto: String
     let winner: String
     let date: String
-    
+}
+
+extension Game {
     static func getGames() -> [Game] {
         var arrayOfGames: [Game] = []
         let dataManager = DataManager.shared
@@ -41,8 +43,8 @@ struct Game {
             
             guard let attackersTeam = attackers else { return [] }
             guard let deffendersTeam = defenders else { return [] }
-                    
-                    
+            
+            
             let topPlayer = game["TopPlayer"] ?? ""
             let topPlayerPhoto = game["TopPlayerPhoto"] ?? ""
             let winner = game["Winner"] ?? ""

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct News {
     let id: Int
     let title: String
@@ -20,7 +21,7 @@ extension News {
     static func getNews() -> [News] {
         var resultNews: [News] = []
         let newsList = DataManager.shared.news.shuffled()
-    
+        
         for news in newsList {
             let id = Int(news["Id"] ?? "" ) ?? 0
             let title = news["Title"] ?? ""
@@ -36,6 +37,7 @@ extension News {
                             image: image)
             resultNews.append(news)
         }
-      return resultNews
+        
+        return resultNews
     }
 }
