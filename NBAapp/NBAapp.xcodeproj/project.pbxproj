@@ -7,27 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2060B9B427413C91002CB4D3 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2060B9B327413C91002CB4D3 /* News.swift */; };
+		2060B9B827414B70002CB4D3 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2060B9B727414B70002CB4D3 /* NewsController.swift */; };
+		2060B9BC27416682002CB4D3 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2060B9BB27416682002CB4D3 /* NewsTableViewCell.swift */; };
+		207166C82741982400457744 /* NewsDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207166C72741982400457744 /* NewsDetailedController.swift */; };
+		4B4EE7D327405EF300547272 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EE7D227405EF300547272 /* Games.swift */; };
+		4B4EE7D527405F3B00547272 /* GamesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EE7D427405F3B00547272 /* GamesController.swift */; };
+		4B4EE7D72740677700547272 /* GamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EE7D62740677700547272 /* GamesTableViewCell.swift */; };
+		4B4EE7D9274067EA00547272 /* GameDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EE7D8274067EA00547272 /* GameDetailedController.swift */; };
 		C20E2AE7273E54A8009A194D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E2AE6273E54A8009A194D /* AppDelegate.swift */; };
 		C20E2AE9273E54A8009A194D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E2AE8273E54A8009A194D /* SceneDelegate.swift */; };
-		C20E2AEB273E54A8009A194D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E2AEA273E54A8009A194D /* ViewController.swift */; };
 		C20E2AEE273E54A8009A194D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E2AEC273E54A8009A194D /* Main.storyboard */; };
 		C20E2AF0273E54AA009A194D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C20E2AEF273E54AA009A194D /* Assets.xcassets */; };
 		C20E2AF3273E54AA009A194D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E2AF1273E54AA009A194D /* LaunchScreen.storyboard */; };
 		C20E2B00273E5705009A194D /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E2AFF273E5705009A194D /* Games.storyboard */; };
 		C20E2B02273E571E009A194D /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E2B01273E571E009A194D /* News.storyboard */; };
+		C20E2B04273E6753009A194D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E2B03273E6753009A194D /* DataManager.swift */; };
+		C23ADB5F273FEE7D0090A6C3 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23ADB5E273FEE7D0090A6C3 /* Team.swift */; };
+		C23ADB61273FF3A80090A6C3 /* TeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23ADB60273FF3A80090A6C3 /* TeamsController.swift */; };
+		C23D27452740E21800FD864A /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23D27442740E21800FD864A /* Developer.swift */; };
+		C29ABEDB274029EA0063AF17 /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29ABEDA274029EA0063AF17 /* TeamsTableViewCell.swift */; };
+		C29ABEDD27402EFA0063AF17 /* TeamDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29ABEDC27402EFA0063AF17 /* TeamDetailedController.swift */; };
+		C2A986432740CE7800DDBC43 /* DevelopersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A986422740CE7800DDBC43 /* DevelopersController.swift */; };
+		C2A986452741187400DDBC43 /* DeveloperDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A986442741187400DDBC43 /* DeveloperDetailedController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2060B9B327413C91002CB4D3 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		2060B9B727414B70002CB4D3 /* NewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
+		2060B9BB27416682002CB4D3 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		207166C72741982400457744 /* NewsDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailedController.swift; sourceTree = "<group>"; };
+		4B4EE7D227405EF300547272 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		4B4EE7D427405F3B00547272 /* GamesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesController.swift; sourceTree = "<group>"; };
+		4B4EE7D62740677700547272 /* GamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewCell.swift; sourceTree = "<group>"; };
+		4B4EE7D8274067EA00547272 /* GameDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailedController.swift; sourceTree = "<group>"; };
 		C20E2AE3273E54A8009A194D /* NBAapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C20E2AE6273E54A8009A194D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C20E2AE8273E54A8009A194D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C20E2AEA273E54A8009A194D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C20E2AED273E54A8009A194D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C20E2AEF273E54AA009A194D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C20E2AF2273E54AA009A194D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C20E2AF4273E54AA009A194D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C20E2AFF273E5705009A194D /* Games.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Games.storyboard; sourceTree = "<group>"; };
 		C20E2B01273E571E009A194D /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		C20E2B03273E6753009A194D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		C23ADB5E273FEE7D0090A6C3 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		C23ADB60273FF3A80090A6C3 /* TeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsController.swift; sourceTree = "<group>"; };
+		C23D27442740E21800FD864A /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
+		C29ABEDA274029EA0063AF17 /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
+		C29ABEDC27402EFA0063AF17 /* TeamDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailedController.swift; sourceTree = "<group>"; };
+		C2A986422740CE7800DDBC43 /* DevelopersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersController.swift; sourceTree = "<group>"; };
+		C2A986442741187400DDBC43 /* DeveloperDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperDetailedController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +104,10 @@
 		C20E2AFA273E54FD009A194D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2060B9B327413C91002CB4D3 /* News.swift */,
+				4B4EE7D227405EF300547272 /* Games.swift */,
+				C23ADB5E273FEE7D0090A6C3 /* Team.swift */,
+				C23D27442740E21800FD864A /* Developer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,7 +126,17 @@
 		C20E2AFC273E550C009A194D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C20E2AEA273E54A8009A194D /* ViewController.swift */,
+				2060B9B727414B70002CB4D3 /* NewsController.swift */,
+				2060B9BB27416682002CB4D3 /* NewsTableViewCell.swift */,
+				207166C72741982400457744 /* NewsDetailedController.swift */,
+				4B4EE7D427405F3B00547272 /* GamesController.swift */,
+				4B4EE7D8274067EA00547272 /* GameDetailedController.swift */,
+				4B4EE7D62740677700547272 /* GamesTableViewCell.swift */,
+				C23ADB60273FF3A80090A6C3 /* TeamsController.swift */,
+				C29ABEDA274029EA0063AF17 /* TeamsTableViewCell.swift */,
+				C29ABEDC27402EFA0063AF17 /* TeamDetailedController.swift */,
+				C2A986422740CE7800DDBC43 /* DevelopersController.swift */,
+				C2A986442741187400DDBC43 /* DeveloperDetailedController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +144,7 @@
 		C20E2AFD273E5514009A194D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C20E2B03273E6753009A194D /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -186,8 +231,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C20E2AEB273E54A8009A194D /* ViewController.swift in Sources */,
+				2060B9B827414B70002CB4D3 /* NewsController.swift in Sources */,
+				C20E2B04273E6753009A194D /* DataManager.swift in Sources */,
+				2060B9BC27416682002CB4D3 /* NewsTableViewCell.swift in Sources */,
+				2060B9B427413C91002CB4D3 /* News.swift in Sources */,
+				207166C82741982400457744 /* NewsDetailedController.swift in Sources */,
+				C23D27452740E21800FD864A /* Developer.swift in Sources */,
+				C23ADB5F273FEE7D0090A6C3 /* Team.swift in Sources */,
+				4B4EE7D9274067EA00547272 /* GameDetailedController.swift in Sources */,
+				4B4EE7D72740677700547272 /* GamesTableViewCell.swift in Sources */,
+				4B4EE7D327405EF300547272 /* Games.swift in Sources */,
 				C20E2AE7273E54A8009A194D /* AppDelegate.swift in Sources */,
+				4B4EE7D527405F3B00547272 /* GamesController.swift in Sources */,
+				C2A986432740CE7800DDBC43 /* DevelopersController.swift in Sources */,
+				C2A986452741187400DDBC43 /* DeveloperDetailedController.swift in Sources */,
+				C29ABEDB274029EA0063AF17 /* TeamsTableViewCell.swift in Sources */,
+				C29ABEDD27402EFA0063AF17 /* TeamDetailedController.swift in Sources */,
+				C23ADB61273FF3A80090A6C3 /* TeamsController.swift in Sources */,
 				C20E2AE9273E54A8009A194D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,18 +403,19 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sbuinovsky.NBAapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -371,18 +432,19 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sbuinovsky.NBAapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
