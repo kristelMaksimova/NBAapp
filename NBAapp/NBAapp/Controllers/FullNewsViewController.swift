@@ -15,9 +15,12 @@ class NewsDetailedController: UIViewController {
     @IBOutlet var subtitleFullNews: UILabel!
     @IBOutlet var dateFullNews: UILabel!
     @IBOutlet var sourceFullNews: UILabel!
+    @IBOutlet var reedButton: UIBarButtonItem!
     
     //MARK: - Public properties
     var news: News!
+    var rowIndex: Int!
+    var delegate: NewsListViewController!
     
     //MARK: - Override
     override func viewDidLoad() {
@@ -25,8 +28,14 @@ class NewsDetailedController: UIViewController {
         setLabels()
         setImage()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        news.isRead = true
+        delegate.updateModel(with: news, forIndex: rowIndex)
+    }
 }
-
+    
 //MARK: - Extension
 extension NewsDetailedController {
     
