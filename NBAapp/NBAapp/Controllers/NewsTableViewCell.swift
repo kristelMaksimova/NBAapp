@@ -39,4 +39,10 @@ class NewsTableViewCell: UITableViewCell {
         }
         subtitleNews.text = shortTextNews
     }
+    
+    override func prepareForReuse() {
+        imageNews.alpha = 1
+        titleNews.textColor = .black
+        subtitleNews.textColor = .black
+    }
 }

@@ -1,5 +1,3 @@
-# NBAapp
-
 This is small mobile app for NBA legue with static data as a source.
 
 ### Structure
@@ -16,17 +14,20 @@ App's tree of controllers is:
 
 ### Teams
 Presents teams of legue list.
-By tapping to cell there is transition to current team detailed view with additional info, like profile and lineup. There is ability to mark team as favourite by tapping the start at detailed view, and you will see it at the list view.
+By tapping to cell there is transition to current team detailed view with additional info, like profile and lineup.
+In detailed view we can mark team as favorite and this will be marked at the list view.
 
 ### Games
 Presents results of games list.
 By tapping to cell there is transition to current game detailed view with additional info, like game summary and player of the game.
+In detailed view we can mark one or two teams from pair as favorite and this will be marked at the list view in all games were team is.
 
-### News controller
+### News
 Presents latest legue news list.
 By tapping to cell there is transition to current news detailed view with additional info, like large photo and full text of news.
+When we go to detailed view with full news, and going back to list this news marks as read.
 
-### Developers controller
+### Developers
 Presents team of project with roles and responsibility of every member.
 By tapping to cell there is member detailed view with additional info.
 
