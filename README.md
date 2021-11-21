@@ -42,3 +42,5 @@ By tapping to cell there is member detailed view with additional info.
 9. Table view configuration
 10. Custom table view cells
 11. Application lifecycle
+
+Little article about our work process https://stas0n.dev/2021/11/21/first-teamwork-practice/
